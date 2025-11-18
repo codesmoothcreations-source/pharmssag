@@ -1,0 +1,344 @@
+.header {
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.logoFallback {
+  font-size: 2rem;
+  color: #22c55e;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoPrimary {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #22c55e;
+  line-height: 1;
+}
+
+.logoSecondary {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: #22c55e;
+  transform: translateY(-1px);
+}
+
+.navLink.active {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #22c55e;
+  border-radius: 1px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchBtn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBtn:hover {
+  color: #22c55e;
+  background: #f8f9fa;
+  transform: scale(1.1);
+}
+
+.userMenu {
+  position: relative;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f8f9fa;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+}
+
+.userButton:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.userDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  min-width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.userMenu:hover .userDropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background: #f8f9fa;
+  color: #22c55e;
+}
+
+.authButtons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all 0.4s ease;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid transparent;
+}
+
+.btnPrimary {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.btnPrimary:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+}
+
+.btnOutline {
+  border: 2px solid #22c55e;
+  color: #22c55e;
+  background: transparent;
+}
+
+.btnOutline:hover {
+  background: #22c55e;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.mobileMenuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobileMenuToggle:hover {
+  color: #22c55e;
+  background: #f8f9fa;
+}
+
+.mobileNav {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  padding: 1rem 0;
+  border-top: 1px solid #e9ecef;
+}
+
+.mobileNavLink {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.mobileNavLink:hover {
+  color: #22c55e;
+  padding-left: 0.5rem;
+}
+
+.mobileNavLink.active {
+  color: #22c55e;
+  font-weight: 600;
+  background: #f0fdf4;
+  padding-left: 0.5rem;
+  border-radius: 8px;
+}
+
+.mobileAuth {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .nav {
+    display: none;
+  }
+  
+  .authButtons {
+    display: none;
+  }
+  
+  .userMenu {
+    display: none;
+  }
+  
+  .mobileMenuToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobileNav {
+    display: flex;
+  }
+  
+  .logoPrimary {
+    font-size: 1.25rem;
+  }
+  
+  .logoSecondary {
+    font-size: 0.75rem;
+  }
+  
+  .logoImage {
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContent {
+    padding: 0.75rem 0;
+  }
+  
+  .logoText {
+    display: none;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+}

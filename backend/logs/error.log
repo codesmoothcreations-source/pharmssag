@@ -1,0 +1,66 @@
+{
+  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5000',
+  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5000\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
+    '    at listenInCluster (node:net:1997:12)\n' +
+    '    at node:net:2206:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  level: 'error',
+  message: 'Uncaught Exception',
+  timestamp: '2025-11-17T10:09:20.576Z'
+}
+{
+  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5001',
+  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5001\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
+    '    at listenInCluster (node:net:1997:12)\n' +
+    '    at node:net:2206:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  level: 'error',
+  message: 'Uncaught Exception',
+  timestamp: '2025-11-17T10:09:20.582Z'
+}
+{
+  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5000',
+  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5000\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
+    '    at listenInCluster (node:net:1997:12)\n' +
+    '    at node:net:2206:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  level: 'error',
+  message: 'Uncaught Exception',
+  timestamp: '2025-11-17T10:11:48.625Z'
+}
+{
+  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5001',
+  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5001\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
+    '    at listenInCluster (node:net:1997:12)\n' +
+    '    at node:net:2206:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  level: 'error',
+  message: 'Uncaught Exception',
+  timestamp: '2025-11-17T10:11:48.637Z'
+}
+{
+  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5000',
+  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5000\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
+    '    at listenInCluster (node:net:1997:12)\n' +
+    '    at node:net:2206:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  level: 'error',
+  message: 'Uncaught Exception',
+  timestamp: '2025-11-17T10:15:24.250Z'
+}
+{
+  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5001',
+  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5001\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
+    '    at listenInCluster (node:net:1997:12)\n' +
+    '    at node:net:2206:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  level: 'error',
+  message: 'Uncaught Exception',
+  timestamp: '2025-11-17T10:15:24.257Z'
+}

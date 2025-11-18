@@ -1,0 +1,76 @@
+/* Import Josefin Sans */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
+.questions-container {
+  padding: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  transition: all 0.3s ease;
+}
+
+.questions-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.questions-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16a34a; /* primary green */
+  margin-bottom: 0.5rem;
+}
+
+.questions-header p {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.empty-state, .error-message {
+  text-align: center;
+  margin-top: 3rem;
+  color: #6b7280;
+}
+
+.empty-state h3, .error-message {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #16a34a;
+}
+
+.empty-state p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* Optional hover animation for QuestionItem */
+.questions-grid > * {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.questions-grid > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .questions-container {
+    padding: 1rem;
+  }
+
+  .questions-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .questions-header p {
+    font-size: 0.9rem;
+  }
+}

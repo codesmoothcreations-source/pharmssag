@@ -1,0 +1,361 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --green: #22c55e;
+  --green-dark: #16a34a;
+  --white: #ffffff;
+  --gray: #f8fafc;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --radius: 1.5rem;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --transition: all 0.4s ease;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: var(--gray);
+  color: var(--text-dark);
+}
+
+/* --- Page Layout --- */
+.preview-page {
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom right, #ffffff, #f4fdf7);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.preview-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+
+/* --- Content Layout --- */
+.preview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* --- File Preview --- */
+.file-preview-section {
+  text-align: center;
+}
+
+.file-preview-card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 2rem 1rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.file-preview-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+}
+
+.file-icon-large {
+  font-size: 4rem;
+  color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.file-info h2 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.file-meta {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* --- Buttons --- */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.9rem 1.8rem;
+  font-size: 0.9rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+}
+
+.btn-outline {
+  border: 2px solid var(--green);
+  background: transparent;
+  color: var(--green);
+}
+
+.btn-outline:hover {
+  background: var(--green);
+  color: var(--white);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+}
+
+/* --- Info Section --- */
+.question-info-section {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.info-card h3 {
+  color: var(--green-dark);
+  margin-bottom: 1.2rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  color: var(--text-dark);
+}
+
+.info-icon {
+  font-size: 1.2rem;
+  color: var(--green);
+  margin-top: 0.1rem;
+}
+
+.info-item strong {
+  display: block;
+  font-weight: 600;
+}
+
+.info-item span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* --- Description & Tags --- */
+.description-section,
+.tags-section {
+  margin-top: 2rem;
+}
+
+.description-section h4,
+.tags-section h4 {
+  color: var(--text-dark);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.description-section p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--green);
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.tag:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* --- Dates --- */
+.dates-section {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* --- Related Videos --- */
+.related-videos-section {
+  margin-top: 2.5rem;
+}
+
+.related-videos-section h3 {
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.2);
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.video-card:hover img {
+  transform: scale(1.05);
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(34, 197, 94, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.video-card:hover .video-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.video-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.video-info h4 {
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.video-info p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* --- Error State --- */
+.error-state {
+  text-align: center;
+  padding: 3rem;
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.error-state h2 {
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+.error-state p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .file-info h2 {
+    font-size: 1.25rem;
+  }
+}

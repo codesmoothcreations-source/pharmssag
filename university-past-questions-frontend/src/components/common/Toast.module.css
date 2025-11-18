@@ -1,0 +1,125 @@
+/* Toast Container */
+.toastContainer {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Toast Base */
+.toast {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 350px;
+  background-color: #1f2937; /* dark background */
+  color: #f3f4f6;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+/* Toast Visible / Exiting */
+.toastVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.toastExiting {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* Toast Types */
+.toastSuccess {
+  border-left: 4px solid #22c55e;
+}
+.toastError {
+  border-left: 4px solid #ef4444;
+}
+.toastInfo {
+  border-left: 4px solid #3b82f6;
+}
+
+/* Toast Content */
+.toastContent {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.toastIcon {
+  font-size: 1.2rem;
+}
+
+.toastIconSuccess {
+  color: #22c55e;
+}
+.toastIconError {
+  color: #ef4444;
+}
+.toastIconInfo {
+  color: #3b82f6;
+}
+
+.toastMessage {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.toastClose {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.toastClose:hover {
+  color: #f87171;
+}
+
+/* Toast Progress Bar */
+.toastProgress {
+  height: 3px;
+  background: #374151;
+  width: 100%;
+}
+
+.toastProgressBar {
+  height: 100%;
+  background-color: #22c55e;
+  animation-name: progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .toastContainer {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    align-items: center;
+  }
+  .toast {
+    width: 100%;
+    max-width: unset;
+  }
+}

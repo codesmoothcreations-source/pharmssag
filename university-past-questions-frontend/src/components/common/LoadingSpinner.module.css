@@ -1,0 +1,139 @@
+/* Container */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+.loadingText {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f3f4f6;
+  text-align: center;
+}
+
+.loadingTextSmall {
+  font-size: 0.75rem;
+}
+
+/* Overlay */
+.loadingOverlay {
+  background-color: rgba(17, 24, 39, 0.75);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.loadingFullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 24, 39, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #22c55e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-small {
+  width: 24px;
+  height: 24px;
+  border-width: 3px;
+}
+
+.spinner-medium {
+  width: 40px;
+  height: 40px;
+  border-width: 4px;
+}
+
+.spinner-large {
+  width: 60px;
+  height: 60px;
+  border-width: 5px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Dots Loader */
+.loadingDots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.loadingDot {
+  width: 10px;
+  height: 10px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loadingDots .loadingDot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loadingDots .loadingDot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to { transform: translateY(-8px); }
+}
+
+/* Skeleton Loader */
+.skeletonLoader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.skeletonLine {
+  height: 12px;
+  background-color: #374151;
+  border-radius: 6px;
+  width: 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeletonLine.short {
+  width: 60%;
+}
+
+@keyframes shimmer {
+  0% { background-color: #374151; }
+  50% { background-color: #4b5563; }
+  100% { background-color: #374151; }
+}
+
+/* Responsive Sizes */
+.spinner-small, .loadingDots-small, .skeletonLoader-small {
+  transform: scale(0.7);
+}
+
+.spinner-medium, .loadingDots-medium, .skeletonLoader-medium {
+  transform: scale(1);
+}
+
+.spinner-large, .loadingDots-large, .skeletonLoader-large {
+  transform: scale(1.5);
+}

@@ -1,0 +1,137 @@
+/* ProtectedRoute.module.css */
+
+/* General container for access granted (children render) */
+.accessGranted {
+  width: 100%;
+}
+
+/* Fullscreen loading overlay */
+.authCheckContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Access Denied / Admin Access Card */
+.accessDenied {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 70vh;
+  background-color: #f6f8fa;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.accessDeniedContent {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.accessDeniedIcon {
+  font-size: 50px;
+  color: #28a745;
+  margin-bottom: 1rem;
+  animation: bounceIcon 0.8s ease;
+}
+
+.accessDenied h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #28a745;
+  margin-bottom: 0.5rem;
+}
+
+.accessDenied p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.accessDescription {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+/* Button group container */
+.accessDeniedActions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Primary Button */
+.btnPrimary {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background-color: #218838;
+}
+
+/* Outline Button */
+.btnOutline {
+  background-color: #fff;
+  color: #28a745;
+  border: 2px solid #28a745;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btnOutline:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIcon {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .accessDeniedContent {
+    padding: 1.5rem 1rem;
+  }
+  .accessDeniedActions {
+    flex-direction: column;
+  }
+  .btnPrimary, .btnOutline {
+    width: 100%;
+    justify-content: center;
+  }
+}

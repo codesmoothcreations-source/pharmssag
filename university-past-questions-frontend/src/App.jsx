@@ -35,6 +35,8 @@ function App() {
       <Router>
         <div className="App">
           <Header />
+          <br />
+          <br />
           <main className="main-content">
             <Suspense fallback={<PageLoader />}>
               <Routes>

@@ -200,7 +200,7 @@ const Preview = () => {
   return (
     <div className="preview-page">
       <div className="container">
-        {/* Header */}
+        {/* Header */} 
         <div className="preview-header">
           <button
             className="back-btn"

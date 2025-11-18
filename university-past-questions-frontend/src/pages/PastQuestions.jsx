@@ -86,29 +86,29 @@ const PastQuestions = () => {
   }
 
   // Fetch all questions once (no dependencies to prevent refreshes)
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      try {
-        setLoading(true)
-        
-        // Fetch ALL questions without any filters initially
-        const response = await apiClient.get('/past-questions')
-        
-        if (response.success) {
-          const questionsData = response.data || []
-          setQuestions(questionsData)
-        } else {
-          throw new Error(response.message || 'Failed to fetch questions')
-        }
-      } catch (err) {
-        console.error('Error fetching questions:', err)
-        setError('Failed to load past questions. Please try again.')
-        setQuestions([])
-      } finally {
-        setLoading(false)
+  const fetchQuestions = async () => {
+    try {
+      setLoading(true)
+      
+      // Fetch ALL questions without any filters initially
+      const response = await apiClient.get('/past-questions')
+      
+      if (response.success) {
+        const questionsData = response.data || []
+        setQuestions(questionsData)
+      } else {
+        throw new Error(response.message || 'Failed to fetch questions')
       }
+    } catch (err) {
+      console.error('Error fetching questions:', err)
+      setError('Failed to load past questions. Please try again.')
+      setQuestions([])
+    } finally {
+      setLoading(false)
     }
+  }
 
+  useEffect(() => {
     fetchFilterOptions()
     fetchQuestions()
   }, [])

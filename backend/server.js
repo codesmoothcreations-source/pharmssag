@@ -74,54 +74,27 @@ app.use(helmet({
     crossOriginEmbedderPolicy: false
 }));
 
-// Rate limiting for API endpoints
-const apiLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // Limit each IP to 100 requests per windowMs
-    message: {
-        success: false,
-        message: 'Too many API requests from this IP, please try again later.'
-    },
-    standardHeaders: true,
-    legacyHeaders: false,
-    handler: (req, res) => {
-        logger.warn(`Rate limit exceeded for IP: ${req.ip}`, {
-            ip: req.ip,
-            userAgent: req.get('User-Agent'),
-            path: req.path,
-            method: req.method
-        });
-        res.status(429).json({
-            success: false,
-            message: 'Too many requests from this IP, please try again later.'
-        });
+// Rate limiting disabled for development - no limits
+const apiLimiter = (req, res, next) => {
+    // Completely disabled in development
+    if (process.env.NODE_ENV === 'development') {
+        return next();
     }
-});
+    // In production, you could add limits here if needed
+    next();
+};
 
-// Stricter rate limiting for authentication endpoints
-const authLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 5, // Limit each IP to 5 auth requests per windowMs
-    message: {
-        success: false,
-        message: 'Too many authentication attempts from this IP, please try again later.'
-    },
-    skipSuccessfulRequests: true,
-    handler: (req, res) => {
-        logger.warn(`Auth rate limit exceeded for IP: ${req.ip}`, {
-            ip: req.ip,
-            userAgent: req.get('User-Agent'),
-            path: req.path,
-            method: req.method
-        });
-        res.status(429).json({
-            success: false,
-            message: 'Too many authentication attempts from this IP, please try again later.'
-        });
+// Authentication rate limiting - disabled for development
+const authLimiter = (req, res, next) => {
+    // Completely disabled in development
+    if (process.env.NODE_ENV === 'development') {
+        return next();
     }
-});
+    // In production, you could add limits here if needed
+    next();
+};
 
-// Apply rate limiting to API routes
+// Apply rate limiting middleware (now disabled for development)
 app.use('/api/', apiLimiter);
 app.use('/api/auth/', authLimiter);
 

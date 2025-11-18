@@ -346,37 +346,65 @@ section {
 
 /* RESPONSIVE */
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
   }
-
+  
+  .hero-title {
+    font-size: 32px;
+  }
+  
   .hero-actions {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-
+  
   .hero-stats {
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
-
-  .features-grid,
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .quick-access-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero, .features, .quick-access, .cta {
+    padding: 60px 0;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+  
   .hero-title {
-    font-size: 34px;
+    font-size: 28px;
   }
-
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .feature-card, .quick-card {
+    padding: 20px;
+  }
+  
   .section-header h2 {
-    font-size: 30px;
-  }
-
-  .features-grid,
-  .quick-access-grid {
-    grid-template-columns: 1fr;
+    font-size: 26px;
   }
 }

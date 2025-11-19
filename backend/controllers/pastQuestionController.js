@@ -16,11 +16,11 @@ const handleCourseReference = async (courseData) => {
                 level: '100', // Default level
                 semester: '1'  // Default semester
             });
-            console.log('Auto-created course:', course.courseCode);
+            
         }
         return course._id;
     } catch (error) {
-        console.error('Error handling course reference:', error);
+        
         return null;
     }
 };
@@ -50,14 +50,14 @@ const getPastQuestions = async (req, res) => {
         const courseQuery = req.query.course || req.query.courseCode;
         if (courseQuery) {
             try {
-                console.log('Filtering by course:', courseQuery);
+                
                 // First find the course by code
                 const course = await Course.findOne({ courseCode: courseQuery.toUpperCase() });
                 if (course) {
                     query.course = course._id;
-                    console.log('Found course:', course.courseCode, 'ID:', course._id);
+                    
                 } else {
-                    console.log('Course not found:', courseQuery);
+                    
                     // If course not found, return empty results
                     return res.json({
                         success: true,
@@ -67,7 +67,7 @@ const getPastQuestions = async (req, res) => {
                     });
                 }
             } catch (error) {
-                console.error('Error looking up course:', error);
+                
                 return res.json({
                     success: true,
                     count: 0,
@@ -82,7 +82,7 @@ const getPastQuestions = async (req, res) => {
             query.$text = { $search: req.query.search };
         }
 
-        console.log('Query:', query);
+        
 
         // Pagination
         const page = parseInt(req.query.page) || 1;
@@ -100,7 +100,7 @@ const getPastQuestions = async (req, res) => {
         // Get total count for pagination
         const total = await PastQuestion.countDocuments(query);
 
-        console.log('Found questions:', pastQuestions.length);
+        
 
         res.json({
             success: true,
@@ -113,7 +113,7 @@ const getPastQuestions = async (req, res) => {
             data: pastQuestions
         });
     } catch (error) {
-        console.error('Get past questions error:', error);
+        
         res.status(500).json({
             success: false,
             message: 'Server error',
@@ -149,7 +149,7 @@ const getPastQuestion = async (req, res) => {
             data: pastQuestion
         });
     } catch (error) {
-        console.error('Get past question error:', error);
+        
         res.status(500).json({
             success: false,
             message: 'Server error',
@@ -165,9 +165,9 @@ const getPastQuestion = async (req, res) => {
  */
 const createPastQuestion = async (req, res) => {
     try {
-        console.log('Creating past question with data:', req.body);
-        console.log('File:', req.file);
-        console.log('User:', req.user);
+        
+        
+        
 
         // Check if file was uploaded
         if (!req.file) {
@@ -204,10 +204,10 @@ const createPastQuestion = async (req, res) => {
             }
         }
 
-        console.log('Final request body:', req.body);
+        
 
         const pastQuestion = await PastQuestion.create(req.body);
-        console.log('Created past question:', pastQuestion);
+        
 
         // Populate the created past question
         const populatedPastQuestion = await PastQuestion.findById(pastQuestion._id)
@@ -221,8 +221,8 @@ const createPastQuestion = async (req, res) => {
                     (req.user.role !== 'admin' ? ' - Waiting for admin approval' : '')
         });
     } catch (error) {
-        console.error('Create past question error:', error);
-        console.error('Error details:', error.errors);
+        
+        
         res.status(500).json({
             success: false,
             message: 'Server error creating past question',
@@ -239,8 +239,8 @@ const createPastQuestion = async (req, res) => {
  */
 const updateQuestionMetadata = async (req, res) => {
     try {
-        console.log('Updating question metadata:', req.params.id);
-        console.log('Metadata update data:', req.body);
+        
+        
 
         let pastQuestion = await PastQuestion.findById(req.params.id);
 
@@ -272,7 +272,7 @@ const updateQuestionMetadata = async (req, res) => {
             }
         }
 
-        console.log('Final metadata update body:', req.body);
+        
 
         pastQuestion = await PastQuestion.findByIdAndUpdate(
             req.params.id,
@@ -284,7 +284,7 @@ const updateQuestionMetadata = async (req, res) => {
         ).populate('course', 'courseCode courseName')
          .populate('uploader', 'name');
 
-        console.log('Updated past question metadata:', pastQuestion);
+        
 
         res.json({
             success: true,
@@ -292,8 +292,8 @@ const updateQuestionMetadata = async (req, res) => {
             message: 'Past question metadata updated successfully'
         });
     } catch (error) {
-        console.error('Update question metadata error:', error);
-        console.error('Error details:', error.errors);
+        
+        
         res.status(500).json({
             success: false,
             message: 'Server error updating past question metadata',
@@ -310,9 +310,9 @@ const updateQuestionMetadata = async (req, res) => {
  */
 const updatePastQuestion = async (req, res) => {
     try {
-        console.log('Updating past question:', req.params.id);
-        console.log('Update data:', req.body);
-        console.log('File:', req.file);
+        
+        
+        
 
         let pastQuestion = await PastQuestion.findById(req.params.id);
 
@@ -352,7 +352,7 @@ const updatePastQuestion = async (req, res) => {
             req.body.fileSize = req.file.size;
         }
 
-        console.log('Final update body:', req.body);
+        
 
         pastQuestion = await PastQuestion.findByIdAndUpdate(
             req.params.id,
@@ -364,7 +364,7 @@ const updatePastQuestion = async (req, res) => {
         ).populate('course', 'courseCode courseName')
          .populate('uploader', 'name');
 
-        console.log('Updated past question:', pastQuestion);
+        
 
         res.json({
             success: true,
@@ -372,8 +372,8 @@ const updatePastQuestion = async (req, res) => {
             message: 'Past question updated successfully'
         });
     } catch (error) {
-        console.error('Update past question error:', error);
-        console.error('Error details:', error.errors);
+        
+        
         res.status(500).json({
             success: false,
             message: 'Server error updating past question',
@@ -415,7 +415,7 @@ const deletePastQuestion = async (req, res) => {
             message: 'Past question deleted successfully'
         });
     } catch (error) {
-        console.error('Delete past question error:', error);
+        
         res.status(500).json({
             success: false,
             message: 'Server error deleting past question',
@@ -451,7 +451,7 @@ const approvePastQuestion = async (req, res) => {
             message: 'Past question approved successfully'
         });
     } catch (error) {
-        console.error('Approve past question error:', error);
+        
         res.status(500).json({
             success: false,
             message: 'Server error approving past question',
@@ -485,7 +485,7 @@ const downloadPastQuestion = async (req, res) => {
         res.download(filePath, `${pastQuestion.title}.${pastQuestion.fileType === 'pdf' ? 'pdf' : pastQuestion.fileType === 'image' ? 'png' : 'doc'}`);
 
     } catch (error) {
-        console.error('Download past question error:', error);
+        
         res.status(500).json({
             success: false,
             message: 'Server error downloading past question',
@@ -554,7 +554,7 @@ const getFilterOptions = async (req, res) => {
             }
         });
     } catch (error) {
-        console.error('Get filter options error:', error);
+        
         res.status(500).json({
             success: false,
             message: 'Server error fetching filter options',

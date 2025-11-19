@@ -69,14 +69,14 @@ const searchYouTubeAPI = async (options) => {
                     contentDetails: statsMap.get(item.id.videoId)?.contentDetails || {}
                 }));
             } catch (statsError) {
-                console.warn('Could not fetch video statistics:', statsError.message);
+                
                 // Continue with basic data if stats fail
             }
         }
 
         return response;
     } catch (error) {
-        console.error('YouTube API error:', error.response?.data || error.message);
+        
         
         if (error.response?.status === 403) {
             if (error.response?.data?.error?.errors?.[0]?.reason === 'quotaExceeded') {
@@ -118,7 +118,7 @@ const getVideoDetails = async (videoId) => {
 
         return response.data.items[0];
     } catch (error) {
-        console.error('Error fetching video details:', error.message);
+        
         throw error;
     }
 };
@@ -157,7 +157,7 @@ const getRelatedVideos = async (videoId, maxResults = 12) => {
             }
         };
     } catch (error) {
-        console.error('Error fetching related videos:', error.message);
+        
         throw error;
     }
 };

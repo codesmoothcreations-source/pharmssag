@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FaSave, FaTimes, FaTrash, FaCheck, FaPlus } from 'react-icons/fa'
-import { updateQuestion, deleteQuestion } from '../../api/pastQuestionsApi'
-import './EditQuestion.css'
+import { getAllCourses } from '../../api/coursesApi'
+import styles from './EditQuestion.module.css'
 
 const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
   const [formData, setFormData] = useState({
@@ -17,22 +17,29 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
+  const [courses, setCourses] = useState([])
 
-  // Sample course options
-  const courseOptions = [
-    'PHAR101 - African Studies',
-    'PHAR102 - Computer Literacy', 
-    'PHAR103 - Communication Skills I',
-    'PHAR104 - General Chemistry I',
-    'PHAR105 - Algebra & Trigonometry',
-    'PHAR106 - Physics for Pharmacy'
-  ]
+  // Fetch courses from database
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const response = await getAllCourses()
+        const coursesData = response.data || response
+        setCourses(Array.isArray(coursesData) ? coursesData : [])
+      } catch (err) {
+        
+        setError('Failed to load courses')
+      }
+    }
+
+    fetchCourses()
+  }, [])
 
   useEffect(() => {
     if (question) {
       setFormData({
         title: question.title || '',
-        course: question.course || '',
+        course: question.course?._id || question.course || '',
         academicYear: question.academicYear || '',
         semester: question.semester?.toString() || '1',
         level: question.level || '100',
@@ -82,66 +89,35 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
     setError('')
 
     try {
-      const token = localStorage.getItem('token')
-      
-      if (!token) {
-        setError('Authentication required. Please log in again.')
-        setLoading(false)
-        return
-      }
-
-      const updatedQuestion = await updateQuestion(
-        question._id || question.id,
-        formData,
-        token
-      )
+      // Call the parent component's save handler with form data
+      // The parent (AdminPanel) will handle the API call
+      await onSave(formData)
       
       setSuccess(true)
+      // Close modal after successful save
       setTimeout(() => {
-        onSave(updatedQuestion)
-      }, 800)
+        onCancel()
+      }, 1200)
       
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to update question. Please try again.')
-      console.error('Update error:', err)
+      
     } finally {
       setLoading(false)
     }
   }
 
-  const handleDelete = async () => {
-    if (!window.confirm('Are you sure you want to delete this question? This action cannot be undone.')) {
-      return
-    }
-
-    setLoading(true)
-    setError('')
-
-    try {
-      const token = localStorage.getItem('token')
-      
-      if (!token) {
-        setError('Authentication required. Please log in again.')
-        setLoading(false)
-        return
-      }
-
-      await deleteQuestion(question._id || question.id, token)
+  const handleDelete = () => {
+    if (window.confirm('Are you sure you want to delete this question? This action cannot be undone.')) {
       onDelete(question._id || question.id)
-      
-    } catch (err) {
-      setError(err.response?.data?.message || 'Failed to delete question. Please try again.')
-      console.error('Delete error:', err)
-    } finally {
-      setLoading(false)
     }
   }
 
   if (!question) {
     return (
-      <div className="edit-question card">
-        <div className="loading-state">
-          <div className="loading-dots">
+      <div className={styles.editQuestion}>
+        <div className={styles.loadingState}>
+          <div className={styles.loadingDots}>
             <span></span>
             <span></span>
             <span></span>
@@ -153,12 +129,12 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
   }
 
   return (
-    <div className="edit-question card">
-      <div className="form-header">
+    <div className={styles.editQuestion}>
+      <div className={styles.formHeader}>
         <h2>Edit Past Question</h2>
         <button 
           onClick={onCancel} 
-          className="close-btn" 
+          className={styles.closeBtn} 
           disabled={loading}
           aria-label="Close"
         >
@@ -167,22 +143,22 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
       </div>
 
       {error && (
-        <div className="error-message" role="alert">
+        <div className={styles.errorMessage} role="alert">
           {error}
         </div>
       )}
 
       {success && (
-        <div className="success-message" role="alert">
-          <FaCheck className="success-animation" />
+        <div className={styles.successMessage} role="alert">
+          <FaCheck className={styles.successAnimation} />
           Question updated successfully!
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="edit-form-content">
-        <div className="form-grid">
-          <div className="form-group">
-            <label htmlFor="title" className="form-label">
+      <form onSubmit={handleSubmit} className={styles.editFormContent}>
+        <div className={styles.formGrid}>
+          <div className={styles.formGroup}>
+            <label htmlFor="title" className={styles.formLabel}>
               Question Title *
             </label>
             <input
@@ -191,15 +167,15 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               name="title"
               value={formData.title}
               onChange={handleInputChange}
-              className="form-input"
+              className={styles.formInput}
               placeholder="Enter question title..."
               required
               disabled={loading}
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="course" className="form-label">
+          <div className={styles.formGroup}>
+            <label htmlFor="course" className={styles.formLabel}>
               Course *
             </label>
             <select
@@ -207,21 +183,21 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               name="course"
               value={formData.course}
               onChange={handleInputChange}
-              className="form-select"
+              className={styles.formSelect}
               required
               disabled={loading}
             >
               <option value="">Select a course</option>
-              {courseOptions.map(course => (
-                <option key={course} value={course}>
-                  {course}
+              {courses.map(course => (
+                <option key={course._id} value={course._id}>
+                  {course.courseCode} - {course.courseName}
                 </option>
               ))}
             </select>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="academicYear" className="form-label">
+          <div className={styles.formGroup}>
+            <label htmlFor="academicYear" className={styles.formLabel}>
               Academic Year *
             </label>
             <input
@@ -230,15 +206,15 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               name="academicYear"
               value={formData.academicYear}
               onChange={handleInputChange}
-              className="form-input"
+              className={styles.formInput}
               placeholder="e.g., 2022/2023"
               required
               disabled={loading}
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="level" className="form-label">
+          <div className={styles.formGroup}>
+            <label htmlFor="level" className={styles.formLabel}>
               Level *
             </label>
             <select
@@ -246,7 +222,7 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               name="level"
               value={formData.level}
               onChange={handleInputChange}
-              className="form-select"
+              className={styles.formSelect}
               required
               disabled={loading}
             >
@@ -258,8 +234,8 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
             </select>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="semester" className="form-label">
+          <div className={styles.formGroup}>
+            <label htmlFor="semester" className={styles.formLabel}>
               Semester *
             </label>
             <select
@@ -267,7 +243,7 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               name="semester"
               value={formData.semester}
               onChange={handleInputChange}
-              className="form-select"
+              className={styles.formSelect}
               required
               disabled={loading}
             >
@@ -278,30 +254,30 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
         </div>
 
         {/* Tags Section */}
-        <div className="form-group">
-          <label className="form-label">Tags</label>
-          <div className="tags-input">
+        <div className={styles.formGroup}>
+          <label className={styles.formLabel}>Tags</label>
+          <div className={styles.tagsInput}>
             <input
               type="text"
               value={tagInput}
               onChange={(e) => setTagInput(e.target.value)}
               onKeyPress={handleTagInputKeyPress}
-              className="form-input"
+              className={styles.formInput}
               placeholder="Add tags and press Enter"
               disabled={loading}
             />
             <button 
               type="button" 
               onClick={addTag} 
-              className="btn btn-outline btn-sm"
+              className={styles.btnOutlineSm}
               disabled={loading || !tagInput.trim()}
             >
               <FaPlus />
             </button>
           </div>
-          <div className="tags-list">
+          <div className={styles.tagsList}>
             {formData.tags.map(tag => (
-              <span key={tag} className="tag">
+              <span key={tag} className={styles.tag}>
                 {tag}
                 <button 
                   type="button" 
@@ -314,23 +290,23 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               </span>
             ))}
             {formData.tags.length === 0 && (
-              <span className="no-tags">No tags added yet</span>
+              <span className={styles.noTags}>No tags added yet</span>
             )}
           </div>
         </div>
 
         {/* Form Actions */}
-        <div className="form-actions">
-          <div className="action-left">
+        <div className={styles.formActions}>
+          <div className={styles.actionLeft}>
             <button 
               type="button" 
               onClick={handleDelete}
-              className="btn btn-outline delete-btn"
+              className={`${styles.btn} ${styles.btnOutline} ${styles.deleteBtn}`}
               disabled={loading}
             >
               <FaTrash />
               {loading ? (
-                <div className="loading-dots">
+                <div className={styles.loadingDots}>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -340,23 +316,23 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               )}
             </button>
           </div>
-          <div className="action-right">
+          <div className={styles.actionRight}>
             <button 
               type="button" 
               onClick={onCancel} 
-              className="btn btn-outline"
+              className={`${styles.btn} ${styles.btnOutline}`}
               disabled={loading}
             >
               Cancel
             </button>
             <button 
               type="submit" 
-              className="btn btn-primary"
+              className={`${styles.btn} ${styles.btnPrimary}`}
               disabled={loading}
             >
               {loading ? (
                 <>
-                  <div className="loading-dots">
+                  <div className={styles.loadingDots}>
                     <span></span>
                     <span></span>
                     <span></span>

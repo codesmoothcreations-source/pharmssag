@@ -10,7 +10,7 @@ const videosService = {
       });
       return response.data;
     } catch (error) {
-      console.error('Video search error:', error);
+      
       throw new Error(error.response?.data?.message || 'Failed to search videos');
     }
   }

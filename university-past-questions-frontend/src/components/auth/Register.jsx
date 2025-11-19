@@ -19,7 +19,7 @@ const Register = () => {
   const [error, setError] = useState('')
 
   const { login } = useAuth() // We'll use login to set the user after registration
-  console.log('Register component: Component mounted')
+  
   const navigate = useNavigate()
 
   const handleChange = (e) => {
@@ -61,35 +61,35 @@ const Register = () => {
       // Prepare data for API - remove confirmPassword
       const { confirmPassword, ...registerData } = formData
 
-      console.log('Register component: Calling authApi.register...')
+      
       // Call the register API endpoint
       const response = await authApi.register(registerData)
-      console.log('Register component: Register response:', response)
+      
 
       if (response.success) {
-        console.log('Register component: Registration successful, attempting auto-login...')
+        
         // If registration is successful, automatically log the user in using AuthContext
         const loginResult = await login(formData.email, formData.password)
-        console.log('Register component: Auto-login result:', loginResult)
+        
 
         if (loginResult.success) {
-          console.log('Register component: Auto-login successful, redirecting to home')
+          
           // Redirect to home page or dashboard
           navigate('/')
         } else {
-          console.log('Register component: Auto-login failed, redirecting to login')
+          
           // If auto-login fails, redirect to login page
           setError('Registration successful! Please log in.')
           navigate('/login')
         }
       } else {
-        console.log('Register component: Registration failed:', response.message)
+        
         // Handle registration error from API
         setError(response.message || 'Registration failed. Please try again.')
       }
     } catch (err) {
       // Handle network errors or other exceptions
-      console.error('Registration error:', err)
+      
       
       if (err.response) {
         // Server responded with error status

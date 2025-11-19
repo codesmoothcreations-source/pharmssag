@@ -33,7 +33,7 @@ const AdminPanel = () => {
       setQuestions(Array.isArray(questionsData) ? questionsData : [])
     } catch (err) {
       setError('Failed to fetch questions: ' + (err.response?.data?.message || err.message))
-      console.error('Error fetching questions:', err)
+      
       setQuestions([])
     } finally {
       setLoading(false)
@@ -51,7 +51,7 @@ const AdminPanel = () => {
       setShowUploadForm(false)
     } catch (err) {
       setError('Failed to upload question: ' + (err.response?.data?.message || err.message))
-      console.error('Error uploading question:', err)
+      
     } finally {
       setLoading(false)
     }
@@ -68,18 +68,14 @@ const AdminPanel = () => {
       setEditingQuestion(null)
     } catch (err) {
       setError('Failed to update question: ' + (err.response?.data?.message || err.message))
-      console.error('Error updating question:', err)
+      
     } finally {
       setLoading(false)
     }
   }, [editingQuestion?._id, fetchQuestions])
 
-  // Handle delete question with confirmation
+  // Handle delete question (confirmation is handled by EditQuestion component)
   const handleDeleteQuestion = useCallback(async (questionId) => {
-    if (!window.confirm('Are you sure you want to delete this question?')) {
-      return
-    }
-
     setLoading(true)
     setError('')
     try {
@@ -91,7 +87,7 @@ const AdminPanel = () => {
       }
     } catch (err) {
       setError('Failed to delete question: ' + (err.response?.data?.message || err.message))
-      console.error('Error deleting question:', err)
+      
     } finally {
       setLoading(false)
     }
@@ -191,7 +187,7 @@ const AdminPanel = () => {
   const renderContent = useCallback(() => {
     switch (activeSection) {
       case 'dashboard':
-        // return <AdminDashboard />
+        return <AdminDashboard />
       case 'questions':
         return (
           <div className={styles.questionsManagement} role="region" aria-label="Questions management">

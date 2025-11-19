@@ -14,7 +14,7 @@ const seedCourses = async () => {
 
         // Clear existing courses
         await Course.deleteMany();
-        console.log('🗑️  Existing courses cleared');
+        
 
         // Level 100 - 1st Semester Courses
         const level100FirstSem = [
@@ -79,7 +79,7 @@ const seedCourses = async () => {
 
         // Insert courses
         await Course.insertMany(allCourses);
-        console.log(`✅ ${allCourses.length} courses seeded successfully`);
+        
 
         // Create default admin user if not exists
         const adminExists = await User.findOne({ email: process.env.ADMIN_EMAIL });
@@ -91,14 +91,14 @@ const seedCourses = async () => {
                 role: 'admin',
                 department: 'Pharmacy'
             });
-            console.log('✅ Default admin user created');
+            
         }
 
-        console.log('🎉 Database seeding completed!');
+        
         process.exit(0);
 
     } catch (error) {
-        console.error('❌ Seeding error:', error);
+        
         process.exit(1);
     }
 };

@@ -26,9 +26,9 @@ const searchVideos = async (req, res) => {
             searchQuery = `${courseCode} ${query}`;
         }
 
-        console.log('Searching videos for query:', searchQuery);
-        console.log('Course code:', courseCode);
-        console.log('Max results:', maxResults);
+        
+        
+        
 
         // Use mock service for reliable results
         const mockResponse = getMockVideos(searchQuery, 'all', 'all', parseInt(maxResults));
@@ -37,7 +37,7 @@ const searchVideos = async (req, res) => {
         res.json(mockResponse);
         
     } catch (error) {
-        console.error('Video search error:', error.message);
+        
         
         // Always return a valid response even on error
         const fallbackResponse = getMockVideos('education', 'all', 'all', 12);
@@ -80,7 +80,7 @@ const addVideoToPastQuestion = async (req, res) => {
             message: 'Video added to past question successfully'
         });
     } catch (error) {
-        console.error('Add video error:', error);
+        
         res.status(500).json({
             success: false,
             message: 'Error adding video to past question',

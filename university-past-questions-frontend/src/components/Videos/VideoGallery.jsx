@@ -137,7 +137,7 @@ const VideoGallery = ({ showFilters = true, initialSearch = '', showBulkActions 
         setPinnedVideos(response.data);
       }
     } catch (err) {
-      console.error('Failed to load pinned videos:', err);
+      
     }
   };
   

@@ -188,7 +188,7 @@ const CourseDetail = () => {
         }
 
       } catch (err) {
-        console.error('Error fetching course data:', err)
+        
         addToast('Failed to load course information', 'error')
       } finally {
         setLoading(false)

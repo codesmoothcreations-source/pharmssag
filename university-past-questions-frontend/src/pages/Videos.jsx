@@ -37,7 +37,7 @@ const Videos = () => {
         };
       }
     } catch (err) {
-      console.error('Video search error:', err);
+      
       // Return empty result set instead of fake data
       return {
         success: true,
@@ -63,7 +63,7 @@ const Videos = () => {
       }
     } catch (err) {
       setError('Failed to load videos. Please try again.')
-      console.error('Video search error:', err)
+      
       setVideos([])
     } finally {
       setLoading(false)

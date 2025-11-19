@@ -8,7 +8,7 @@ import { getAllQuestions } from '../../api/pastQuestionsApi'
 import { searchVideos } from '../../api/videosApi'
 import pastQuestionsService from '../../services/pastQuestions'
 import videosService from '../../services/videos'
-import './SearchResults.css'
+import styles from './SearchResults.module.css'
 
 const SearchResults = ({ 
   searchQuery,
@@ -102,13 +102,13 @@ const SearchResults = ({
             
             setVideos(filteredVideos)
           } catch (videoError) {
-            console.error('Error fetching videos:', videoError)
+            
             setVideos([])
           }
         }
 
       } catch (err) {
-        console.error('Error fetching search results:', err)
+        
         setError('Failed to load search results. Please try again.')
       } finally {
         setLoading(false)
@@ -142,8 +142,8 @@ const SearchResults = ({
 
   if (loading) {
     return (
-      <div className="search-results">
-        <div className="loading-container">
+      <div className={styles.searchResults}>
+        <div className={styles.loadingContainer}>
           <LoadingSpinner text={`Searching for "${searchQuery}"...`} />
         </div>
       </div>
@@ -152,12 +152,12 @@ const SearchResults = ({
 
   if (error) {
     return (
-      <div className="search-results">
-        <div className="error-state">
-          <FaExclamationTriangle className="error-icon" />
+      <div className={styles.searchResults}>
+        <div className={styles.errorState}>
+          <FaExclamationTriangle className={styles.errorIcon} />
           <h3>Search Failed</h3>
           <p>{error}</p>
-          <button className="btn btn-primary" onClick={handleRetry}>
+          <button className={`${styles.btn} ${styles.btnPrimary}`} onClick={handleRetry}>
             Try Again
           </button>
         </div>
@@ -166,27 +166,27 @@ const SearchResults = ({
   }
 
   return (
-    <div className="search-results">
+    <div className={styles.searchResults}>
       {/* Results Header */}
-      <div className="results-header">
-        <div className="results-info">
+      <div className={styles.resultsHeader}>
+        <div className={styles.resultsInfo}>
           <h2>
             {searchQuery ? `Results for "${searchQuery}"` : 'All Resources'}
           </h2>
-          <p className="results-count">{getResultsCount()} results found</p>
+          <p className={styles.resultsCount}>{getResultsCount()} results found</p>
         </div>
 
-        <div className="results-controls">
+        <div className={styles.resultsControls}>
           {/* View Mode Toggle */}
-          <div className="view-toggle">
+          <div className={styles.viewToggle}>
             <button
-              className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`}
+              className={`${styles.viewBtn} ${viewMode === 'grid' ? styles.active : ''}`}
               onClick={() => setViewMode('grid')}
             >
               <FaTh />
             </button>
             <button
-              className={`view-btn ${viewMode === 'list' ? 'active' : ''}`}
+              className={`${styles.viewBtn} ${viewMode === 'list' ? styles.active : ''}`}
               onClick={() => setViewMode('list')}
             >
               <FaList />
@@ -203,21 +203,21 @@ const SearchResults = ({
       </div>
 
       {/* Results Tabs */}
-      <div className="results-tabs">
+      <div className={styles.resultsTabs}>
         <button
-          className={`tab-btn ${activeTab === 'all' ? 'active' : ''}`}
+          className={`${styles.tabBtn} ${activeTab === 'all' ? styles.active : ''}`}
           onClick={() => setActiveTab('all')}
         >
           All Resources ({questions.length + videos.length})
         </button>
         <button
-          className={`tab-btn ${activeTab === 'questions' ? 'active' : ''}`}
+          className={`${styles.tabBtn} ${activeTab === 'questions' ? styles.active : ''}`}
           onClick={() => setActiveTab('questions')}
         >
           Past Questions ({questions.length})
         </button>
         <button
-          className={`tab-btn ${activeTab === 'videos' ? 'active' : ''}`}
+          className={`${styles.tabBtn} ${activeTab === 'videos' ? styles.active : ''}`}
           onClick={() => setActiveTab('videos')}
         >
           Videos ({videos.length})
@@ -225,19 +225,19 @@ const SearchResults = ({
       </div>
 
       {/* Results Content */}
-      <div className="results-content">
+      <div className={styles.resultsContent}>
         {(activeTab === 'all' || activeTab === 'questions') && (
-          <div className="questions-section">
+          <div className={styles.questionsSection}>
             <h3>Past Questions</h3>
             {questions.length === 0 ? (
-              <div className="no-results">
+              <div className={styles.noResults}>
                 <p>No past questions found matching your criteria.</p>
                 {searchQuery && (
                   <p>Try adjusting your search terms or filters.</p>
                 )}
               </div>
             ) : (
-              <div className={`questions-grid ${viewMode}`}>
+              <div className={`${viewMode === 'grid' ? styles.questionsGridGrid : styles.questionsGridList}`}>
                 {questions.map(question => (
                   <QuestionCard
                     key={question.id}
@@ -252,17 +252,17 @@ const SearchResults = ({
         )}
 
         {(activeTab === 'all' || activeTab === 'videos') && (
-          <div className="videos-section">
+          <div className={styles.videosSection}>
             <h3>Video Tutorials</h3>
             {videos.length === 0 ? (
-              <div className="no-results">
+              <div className={styles.noResults}>
                 <p>No video tutorials found matching your criteria.</p>
                 {searchQuery && (
                   <p>Try adjusting your search terms or filters.</p>
                 )}
               </div>
             ) : (
-              <div className={`videos-grid ${viewMode}`}>
+              <div className={`${viewMode === 'grid' ? styles.videosGridGrid : styles.videosGridList}`}>
                 {videos.map(video => (
                   <VideoPlayer
                     key={video.videoId || video.id}
@@ -278,11 +278,11 @@ const SearchResults = ({
 
       {/* No results state */}
       {getResultsCount() === 0 && !loading && (
-        <div className="no-results-state">
-          <FaExclamationTriangle className="no-results-icon" />
+        <div className={styles.noResultsState}>
+          <FaExclamationTriangle className={styles.noResultsIcon} />
           <h3>No Results Found</h3>
           <p>We couldn't find any resources matching "{searchQuery}"</p>
-          <div className="suggestions">
+          <div className={styles.suggestions}>
             <p>Suggestions:</p>
             <ul>
               <li>Check your spelling</li>

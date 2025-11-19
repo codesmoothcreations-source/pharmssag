@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { useAuth } from '../../context/AuthContext'
 import { getAllQuestions, updateQuestion, uploadQuestion, deleteQuestion } from '../../api/pastQuestionsApi'
+import { getAllCourses } from '../../api/coursesApi'
+import Table from '../common/Table'
 import styles from './AdminDashboard.module.css'
 
 const AdminDashboard = () => {
   const [pastQuestions, setPastQuestions] = useState([])
+  const [courses, setCourses] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [showForm, setShowForm] = useState(false)
   const [editingQuestion, setEditingQuestion] = useState(null)
+  const [sortConfig, setSortConfig] = useState({ key: null, direction: null })
   const { user } = useAuth()
 
   const [formData, setFormData] = useState({
@@ -22,8 +26,24 @@ const AdminDashboard = () => {
   })
 
   useEffect(() => {
-    fetchPastQuestions()
+    fetchData()
   }, [])
+
+  const fetchData = async () => {
+    try {
+      setLoading(true)
+      const [questionsResponse, coursesResponse] = await Promise.all([
+        getAllQuestions(),
+        getAllCourses()
+      ])
+      setPastQuestions(questionsResponse.data || questionsResponse)
+      setCourses(coursesResponse.data || coursesResponse)
+    } catch (err) {
+      setError('Failed to fetch data')
+    } finally {
+      setLoading(false)
+    }
+  }
 
   const fetchPastQuestions = async () => {
     try {
@@ -61,11 +81,58 @@ const AdminDashboard = () => {
     }
   }
 
+  // Handle sorting
+  const handleSort = useCallback((key) => {
+    let direction = 'asc'
+    
+    if (sortConfig.key === key && sortConfig.direction === 'asc') {
+      direction = 'desc'
+    }
+    
+    setSortConfig({ key, direction })
+    
+    // Sort the data
+    const sortedQuestions = [...pastQuestions].sort((a, b) => {
+      let aValue = a[key]
+      let bValue = b[key]
+      
+      // Handle nested objects (like course)
+      if (key.includes('.')) {
+        const keys = key.split('.')
+        aValue = keys.reduce((obj, k) => obj?.[k], a)
+        bValue = keys.reduce((obj, k) => obj?.[k], b)
+      }
+      
+      // Handle dates
+      if (key === 'createdAt') {
+        aValue = new Date(aValue)
+        bValue = new Date(bValue)
+        return direction === 'asc' ? aValue - bValue : bValue - aValue
+      }
+      
+      // Handle strings
+      if (typeof aValue === 'string' && typeof bValue === 'string') {
+        return direction === 'asc' 
+          ? aValue.localeCompare(bValue)
+          : bValue.localeCompare(aValue)
+      }
+      
+      // Handle numbers
+      if (typeof aValue === 'number' && typeof bValue === 'number') {
+        return direction === 'asc' ? aValue - bValue : bValue - aValue
+      }
+      
+      return 0
+    })
+    
+    setPastQuestions(sortedQuestions)
+  }, [sortConfig, pastQuestions])
+
   const handleEdit = (question) => {
     setEditingQuestion(question)
     setFormData({
       title: question.title || '',
-      course: question.course || '',
+      course: question.course?._id || question.course || '',
       academicYear: question.academicYear || '',
       semester: question.semester || '',
       level: question.level || '100',
@@ -100,6 +167,98 @@ const AdminDashboard = () => {
     setEditingQuestion(null)
     setShowForm(false)
   }
+
+  // Table columns configuration
+  const tableColumns = [
+    {
+      key: 'title',
+      title: 'Title',
+      sortable: true,
+      render: (value, item) => (
+        <div className={styles.questionTitle}>
+          <strong>{value || 'Untitled'}</strong>
+          {item.description && (
+            <div className={styles.questionDescription}>
+              {item.description}
+            </div>
+          )}
+        </div>
+      )
+    },
+    {
+      key: 'course.courseCode',
+      title: 'Course',
+      sortable: true,
+      render: (value, item) => {
+        const course = item.course
+        return course ? (
+          <div>
+            <strong>{course.courseCode}</strong>
+            <div className={styles.courseName}>
+              {course.courseName}
+            </div>
+          </div>
+        ) : (
+          <span className={styles.noCourse}>No course assigned</span>
+        )
+      }
+    },
+    {
+      key: 'academicYear',
+      title: 'Academic Year',
+      sortable: true,
+      render: (value) => value || 'N/A'
+    },
+    {
+      key: 'level',
+      title: 'Level',
+      sortable: true,
+      render: (value) => value ? `Level ${value}` : 'N/A'
+    },
+    {
+      key: 'semester',
+      title: 'Semester',
+      sortable: true,
+      render: (value) => {
+        switch (value) {
+          case '1': return 'First'
+          case '2': return 'Second'
+          default: return 'N/A'
+        }
+      }
+    },
+    {
+      key: 'createdAt',
+      title: 'Created',
+      sortable: true,
+      render: (value) => new Date(value).toLocaleDateString()
+    },
+    {
+      key: 'actions',
+      title: 'Actions',
+      sortable: false,
+      render: (value, item) => (
+        <div className={styles.actionButtons}>
+          <button
+            className={styles.btnEdit}
+            onClick={() => handleEdit(item)}
+            title="Edit question"
+            aria-label={`Edit question: ${item.title || 'Untitled'}`}
+          >
+            Edit
+          </button>
+          <button
+            className={styles.btnDelete}
+            onClick={() => handleDelete(item._id)}
+            title="Delete question"
+            aria-label={`Delete question: ${item.title || 'Untitled'}`}
+          >
+            Delete
+          </button>
+        </div>
+      )
+    }
+  ]
 
   if (loading) {
     return (
@@ -147,16 +306,22 @@ const AdminDashboard = () => {
 
               <div className={styles.formGroup}>
                 <label className={styles.formLabel} htmlFor="course">Course</label>
-                <input
+                <select
                   id="course"
-                  type="text"
                   name="course"
                   value={formData.course}
                   onChange={handleInputChange}
-                  className={styles.formInput}
+                  className={styles.formSelect}
                   required
                   disabled={loading}
-                />
+                >
+                  <option value="">Select a course</option>
+                  {courses.map(course => (
+                    <option key={course._id} value={course._id}>
+                      {course.courseCode} - {course.courseName}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div className={styles.formGroup}>
@@ -267,45 +432,19 @@ const AdminDashboard = () => {
       <div className={styles.questionsSection} role="region" aria-label="Past questions list">
         <h2>Past Questions ({pastQuestions.length})</h2>
         
-        {pastQuestions.length === 0 ? (
-          <div className={styles.emptyState} role="status" aria-live="polite">
-            <p>No past questions found. Add your first question!</p>
-          </div>
-        ) : (
-          <div className={styles.courseGrid} role="grid" aria-label="Questions grid">
-            {pastQuestions.map((question) => (
-              <div key={question._id} className={styles.courseCard} role="gridcell">
-                <div className={styles.questionInfo}>
-                  <h3>{question.title}</h3>
-                  <p><strong>Course:</strong> {question.course?.courseCode || question.course}</p>
-                  <p><strong>Year:</strong> {question.academicYear}</p>
-                  <p><strong>Semester:</strong> {question.semester}</p>
-                  <p><strong>Level:</strong> {question.level}</p>
-                  {question.description && (
-                    <p><strong>Description:</strong> {question.description}</p>
-                  )}
-                </div>
-                
-                <div className={styles.courseActions}>
-                  <button
-                    className={styles.btnOutline}
-                    onClick={() => handleEdit(question)}
-                    aria-label={`Edit question: ${question.title}`}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className={styles.btnError}
-                    onClick={() => handleDelete(question._id)}
-                    aria-label={`Delete question: ${question.title}`}
-                  >
-                    Delete
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+        <Table
+          data={pastQuestions}
+          columns={tableColumns}
+          loading={loading}
+          emptyMessage="No past questions found. Add your first question!"
+          onSort={handleSort}
+          sortConfig={sortConfig}
+          pagination={{
+            itemsPerPage: 10
+          }}
+          ariaLabel="Past questions management table"
+          testId="past-questions-table"
+        />
       </div>
     </div>
   )

@@ -77,41 +77,41 @@ export const AuthProvider = ({ children }) => {
   // Initialize authentication on app startup
    useEffect(() => {
      const initAuth = async () => {
-       console.log('AuthContext: Initializing authentication...')
+       
        const token = localStorage.getItem('token')
-       console.log('AuthContext: Token found in localStorage:', !!token)
+       
 
        if (token) {
          try {
-           console.log('AuthContext: Verifying existing token...')
+           
            // CRITICAL FIX: Pass the token to getProfile API call
            const response = await authApi.getProfile(token)
-           console.log('AuthContext: Profile response:', response)
+           
 
            // Backend returns: { success: true, data: userObject }
            const userData = response.data || response.user || response
-           console.log('AuthContext: Extracted user data:', userData)
+           
 
            if (userData && userData._id) {
              setUser(userData)
              setError(null)
-             console.log('AuthContext: User set successfully')
+             
            } else {
              throw new Error('Invalid user data received')
            }
          } catch (error) {
-           console.error('AuthContext: Token validation failed:', error)
+           
            // Clear invalid token and reset state
            localStorage.removeItem('token')
            setUser(null)
            setError('Session expired. Please login again.')
          }
        } else {
-         console.log('AuthContext: No token found, user not authenticated')
+         
        }
 
        // Set loading to false after authentication check
-       console.log('AuthContext: Setting loading to false')
+       
        setLoading(false)
      }
 
@@ -126,24 +126,24 @@ export const AuthProvider = ({ children }) => {
    */
   const login = async (email, password) => {
      try {
-       console.log('AuthContext login called with:', { email, password: '***' })
+       
        setLoading(true)
        setError(null)
 
        // Call authentication service
-       console.log('Calling authApi.login...')
+       
        const response = await authApi.login(email, password)
-       console.log('authApi.login response:', response)
+       
 
        // Handle different possible response structures from backend
        const responseData = response.data || response
-       console.log('Response data structure:', responseData)
+       
 
        // Backend returns: { success: true, data: { _id, name, email, role, department, token }, message: "Login successful" }
        const userData = responseData.data || responseData.user || responseData
        const token = responseData.data?.token || responseData.token || responseData.accessToken
-       console.log('Extracted token:', token ? 'present' : 'missing')
-       console.log('Extracted user data:', userData)
+       
+       
 
        if (!token) {
          throw new Error('No token received from server')
@@ -151,11 +151,11 @@ export const AuthProvider = ({ children }) => {
 
        // Store JWT token in localStorage
        localStorage.setItem('token', token)
-       console.log('Token stored in localStorage')
+       
 
        // Update user state - use the data object which contains user info + token
        setUser(userData)
-       console.log('User state updated:', userData)
+       
 
        return {
          success: true,
@@ -163,9 +163,9 @@ export const AuthProvider = ({ children }) => {
          user: userData
        }
      } catch (error) {
-       console.error('AuthContext login error:', error)
+       
        const message = error.response?.data?.message || error.message || 'Login failed'
-       console.error('Error message:', message)
+       
        setError(message)
 
        // Clear any potentially invalid token
@@ -182,22 +182,22 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
      try {
-       console.log('AuthContext register called with:', { ...userData, password: '***' })
+       
        setLoading(true)
        setError(null)
 
        const response = await authApi.register(userData)
-       console.log('authApi.register response:', response)
+       
 
        // Handle different response structures
        const responseData = response.data || response
-       console.log('Register response data structure:', responseData)
+       
 
        // Backend returns: { success: true, data: { _id, name, email, role, department, token }, message: "User registered successfully" }
        const newUser = responseData.data || responseData.user || responseData
        const token = responseData.data?.token || responseData.token || responseData.accessToken
-       console.log('Extracted token:', token ? 'present' : 'missing')
-       console.log('Extracted user data:', newUser)
+       
+       
 
        if (!token) {
          throw new Error('No token received from server')
@@ -205,11 +205,11 @@ export const AuthProvider = ({ children }) => {
 
        // Store token
        localStorage.setItem('token', token)
-       console.log('Token stored in localStorage')
+       
 
        // Set user data
        setUser(newUser)
-       console.log('User state updated:', newUser)
+       
 
        return {
          success: true,
@@ -217,9 +217,9 @@ export const AuthProvider = ({ children }) => {
          user: newUser
        }
      } catch (error) {
-       console.error('AuthContext register error:', error)
+       
        const message = error.response?.data?.message || error.message || 'Registration failed'
-       console.error('Error message:', message)
+       
        setError(message)
 
        return {
@@ -246,7 +246,7 @@ export const AuthProvider = ({ children }) => {
       // Optional: Call logout endpoint if backend needs to invalidate token
       // await authService.logout()
     } catch (error) {
-      console.error('Logout error:', error)
+      
       // Force clear authentication state even if there's an error
       localStorage.removeItem('token')
       setUser(null)
@@ -266,7 +266,7 @@ export const AuthProvider = ({ children }) => {
 
   const refreshToken = async () => {
      try {
-       console.log('AuthContext: Refreshing token...')
+       
        const token = localStorage.getItem('token')
        if (!token) {
          throw new Error('No token available for refresh')
@@ -274,11 +274,11 @@ export const AuthProvider = ({ children }) => {
        
        const response = await authApi.getProfile(token)
        const userData = response.data || response.user || response
-       console.log('AuthContext: Token refresh successful, user data:', userData)
+       
        setUser(userData)
        return true
      } catch (error) {
-       console.error('AuthContext: Token refresh failed:', error)
+       
        logout()
        return false
      }
@@ -286,7 +286,7 @@ export const AuthProvider = ({ children }) => {
 
   // Computed authentication state
    const isAuthenticated = !!user && !!localStorage.getItem('token')
-   console.log('AuthContext: Computed isAuthenticated:', isAuthenticated, 'user:', !!user, 'token:', !!localStorage.getItem('token'))
+   )
 
   /**
    * Check if current user has admin privileges
@@ -305,7 +305,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   // Context value object - provides authentication state and functions to components
-   console.log('AuthContext: Creating context value - loading:', loading, 'user:', !!user, 'error:', !!error)
+   
    const value = {
      // State variables
      user,        // Current user data

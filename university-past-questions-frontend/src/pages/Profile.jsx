@@ -78,7 +78,7 @@ const Profile = () => {
       setIsEditing(false)
     } catch (err) {
       setError('Failed to update profile. Please try again.')
-      console.error('Profile update error:', err)
+      
     } finally {
       setLoading(false)
     }

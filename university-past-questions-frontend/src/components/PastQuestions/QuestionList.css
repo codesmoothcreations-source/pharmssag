@@ -1,76 +1,105 @@
-/* Import Josefin Sans */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
-
 .questions-container {
-  padding: 2rem;
-  font-family: 'Josefin Sans', sans-serif;
-  background-color: #f9fafb;
-  color: #111827;
-  transition: all 0.3s ease;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .questions-header {
   text-align: center;
   margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 1px solid #dcfce7;
 }
 
 .questions-header h2 {
-  font-size: 2rem;
+  color: #16a34a;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #16a34a; /* primary green */
-  margin-bottom: 0.5rem;
 }
 
 .questions-header p {
-  font-size: 1rem;
   color: #6b7280;
+  margin: 0;
+  font-size: 1rem;
 }
 
 .questions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
-  transition: all 0.3s ease;
 }
 
-.empty-state, .error-message {
+.empty-state {
   text-align: center;
-  margin-top: 3rem;
-  color: #6b7280;
+  padding: 3rem 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 2px dashed #d1d5db;
 }
 
-.empty-state h3, .error-message {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #16a34a;
+.empty-state h3 {
+  color: #374151;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
 }
 
 .empty-state p {
+  color: #6b7280;
+  margin: 0;
   font-size: 1rem;
-  color: #374151;
 }
 
-/* Optional hover animation for QuestionItem */
-.questions-grid > * {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  background: #fef2f2;
+  color: #dc2626;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin: 1rem;
 }
 
-.questions-grid > *:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* Responsive tweaks */
 @media (max-width: 768px) {
   .questions-container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
-
+  
+  .questions-header {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
   .questions-header h2 {
     font-size: 1.5rem;
   }
+  
+  .questions-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .empty-state {
+    padding: 2rem 1rem;
+  }
+}
 
+@media (max-width: 480px) {
+  .questions-header h2 {
+    font-size: 1.25rem;
+  }
+  
   .questions-header p {
+    font-size: 0.9rem;
+  }
+  
+  .empty-state h3 {
+    font-size: 1.1rem;
+  }
+  
+  .empty-state p {
     font-size: 0.9rem;
   }
 }

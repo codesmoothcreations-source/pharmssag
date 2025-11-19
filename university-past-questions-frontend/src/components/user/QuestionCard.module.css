@@ -1,149 +1,206 @@
 .questionCard {
-  display: flex;
-  flex-direction: column;
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Josefin Sans', sans-serif;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .questionCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-color: #1ca65c;
 }
 
 .questionHeader {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .fileType {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 50px;
-  min-height: 50px;
+  align-items: flex-start;
+}
+
+.fileIcon {
   font-size: 1.5rem;
-  background-color: #ecfdf5;
-  color: #16a34a;
-  border-radius: 8px;
+  color: #6b7280;
+}
+
+.fileIcon.pdf {
+  color: #dc2626;
+}
+
+.fileIcon.image {
+  color: #3b82f6;
+}
+
+.fileIcon.doc {
+  color: #2563eb;
 }
 
 .questionInfo {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 .questionTitle {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #16a34a;
-  margin: 0;
-  line-height: 1.2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .courseDetails {
   display: flex;
-  gap: 1rem;
-  font-size: 0.9rem;
-  color: #4b5563;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.courseDetails span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #6b7280;
 }
 
 .infoIcon {
-  margin-right: 0.25rem;
-  color: #16a34a;
+  font-size: 0.8rem;
+  color: #1ca65c;
 }
 
 .questionDescription {
-  font-size: 0.95rem;
-  color: #374151;
-  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .questionMeta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  font-size: 0.85rem;
-  color: #6b7280;
-  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .metaItem {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+  background: #f8fafc;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
 }
 
 .dateInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.dateInfo span {
   font-size: 0.75rem;
   color: #9ca3af;
-  margin-top: 0.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
 .questionActions {
   display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.75rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
 }
 
 .actionButton {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
   cursor: pointer;
-}
-
-.btnPrimary {
-  background-color: #16a34a;
-  color: #ffffff;
+  transition: all 0.3s ease;
   border: none;
-}
-
-.btnPrimary:hover {
-  background-color: #15803d;
+  flex: 1;
+  justify-content: center;
 }
 
 .btnOutline {
-  background-color: transparent;
-  color: #16a34a;
-  border: 1px solid #16a34a;
+  background: transparent;
+  color: #1ca65c;
+  border: 1px solid #1ca65c;
 }
 
 .btnOutline:hover {
-  background-color: #ecfdf5;
+  background: #1ca65c;
+  color: #ffffff;
 }
 
-.fileIcon {
-  font-size: 1.5rem;
+.btnPrimary {
+  background: #1ca65c;
+  color: #ffffff;
+  border: 1px solid #1ca65c;
 }
 
-/* Responsive tweaks */
+.btnPrimary:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
 @media (max-width: 768px) {
   .questionCard {
-    padding: 0.75rem;
+    padding: 1.25rem;
   }
+  
+  .questionHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .fileType {
+    justify-content: center;
+  }
+  
+  .questionActions {
+    flex-direction: column;
+  }
+  
+  .actionButton {
+    padding: 0.75rem 1rem;
+  }
+}
 
+@media (max-width: 480px) {
+  .questionCard {
+    padding: 1rem;
+  }
+  
   .questionTitle {
     font-size: 1rem;
   }
-
-  .questionActions {
+  
+  .courseDetails,
+  .questionMeta {
     flex-direction: column;
     gap: 0.5rem;
+  }
+  
+  .metaItem {
+    justify-content: center;
   }
 }

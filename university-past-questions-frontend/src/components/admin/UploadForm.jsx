@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback, useMemo } from 'react'
 import { FaUpload, FaTimes, FaFilePdf, FaImage, FaCheck, FaFileWord, FaFilePowerpoint, FaFileAlt, FaTrash, FaPlus } from 'react-icons/fa'
 import { uploadQuestion } from '../../api/pastQuestionsApi'
+import CourseDropdown from './CourseDropdown'
 import LoadingSpinner from '../common/LoadingSpinner'
 import styles from './UploadForm.module.css'
 
@@ -11,12 +12,6 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
     academicYear: '',
     semester: '1',
     level: '100',
-    questionType: 'exam',
-    difficultyLevel: 'intermediate',
-    subjectArea: '',
-    institution: '',
-    faculty: '',
-    department: '',
     tags: '',
     description: '',
     file: null
@@ -28,62 +23,19 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
   const fileInputRef = useRef(null)
   const loadingProp = loading || externalLoading
 
-  // Memoized course options for performance
-  const courseOptions = useMemo(() => [
-    { value: '', label: 'Select a course' },
-    { value: 'PHAR101', label: 'PHAR101 - African Studies' },
-    { value: 'PHAR102', label: 'PHAR102 - Computer Literacy' },
-    { value: 'PHAR103', label: 'PHAR103 - Communication Skills I' },
-    { value: 'PHAR104', label: 'PHAR104 - General Chemistry I' },
-    { value: 'PHAR105', label: 'PHAR105 - Algebra & Trigonometry' },
-    { value: 'PHAR106', label: 'PHAR106 - Physics for Pharmacy' },
-    { value: 'CS101', label: 'CS101 - Introduction to Computer Science' },
-    { value: 'MATH101', label: 'MATH101 - Calculus I' },
-    { value: 'PHY101', label: 'PHY101 - General Physics I' },
-    { value: 'CHEM101', label: 'CHEM101 - General Chemistry' },
-    { value: 'BIO101', label: 'BIO101 - General Biology' },
-    { value: 'ENG101', label: 'ENG101 - English Composition' }
-  ], [])
-
-  // Memoized subject areas for categorization
-  const subjectAreas = useMemo(() => [
-    { value: '', label: 'Select subject area' },
-    { value: 'sciences', label: 'Natural Sciences' },
-    { value: 'mathematics', label: 'Mathematics' },
-    { value: 'engineering', label: 'Engineering' },
-    { value: 'medicine', label: 'Medicine & Health Sciences' },
-    { value: 'pharmacy', label: 'Pharmacy' },
-    { value: 'arts', label: 'Arts & Humanities' },
-    { value: 'social_sciences', label: 'Social Sciences' },
-    { value: 'business', label: 'Business Administration' },
-    { value: 'education', label: 'Education' },
-    { value: 'law', label: 'Law' }
-  ], [])
-
-  // Memoized question types
-  const questionTypes = useMemo(() => [
-    { value: 'exam', label: 'Final Exam' },
-    { value: 'midterm', label: 'Midterm Exam' },
-    { value: 'quiz', label: 'Quiz' },
-    { value: 'assignment', label: 'Assignment' },
-    { value: 'practical', label: 'Practical/Lab' },
-    { value: 'paper', label: 'Research Paper' },
-    { value: 'project', label: 'Project Work' }
-  ], [])
-
-  // Memoized difficulty levels
-  const difficultyLevels = useMemo(() => [
-    { value: 'beginner', label: 'Beginner' },
-    { value: 'intermediate', label: 'Intermediate' },
-    { value: 'advanced', label: 'Advanced' },
-    { value: 'expert', label: 'Expert' }
-  ], [])
-
   const handleInputChange = useCallback((e) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
+    }))
+    if (error) setError('')
+  }, [error])
+
+  const handleCourseChange = useCallback((courseId) => {
+    setFormData(prev => ({
+      ...prev,
+      course: courseId
     }))
     if (error) setError('')
   }, [error])
@@ -190,17 +142,33 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
         return
       }
 
+      console.log('=== Upload Form Submission ===')
+      console.log('Form Data:', {
+        title: formData.title,
+        course: formData.course,
+        academicYear: formData.academicYear,
+        semester: formData.semester,
+        level: formData.level,
+        hasFile: !!formData.file,
+        fileName: formData.file?.name,
+        fileSize: formData.file?.size,
+        fileType: formData.file?.type
+      })
+
       // Validate required fields
-      const requiredFields = ['title', 'course', 'academicYear', 'questionType', 'subjectArea', 'institution']
+      const requiredFields = ['title', 'course', 'academicYear']
       const missingFields = requiredFields.filter(field => !formData[field])
       
       if (missingFields.length > 0) {
-        setError(`Please fill in all required fields: ${missingFields.join(', ')}`)
+        const errorMsg = `Please fill in all required fields: ${missingFields.join(', ')}`
+        console.error('Validation Error:', errorMsg)
+        setError(errorMsg)
         setLoading(false)
         return
       }
 
       if (!formData.file) {
+        console.error('No file selected')
         setError('Please select a file to upload')
         setLoading(false)
         return
@@ -209,6 +177,7 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
       // Validate file
       const fileValidation = validateFile(formData.file)
       if (!fileValidation.valid) {
+        console.error('File Validation Error:', fileValidation.error)
         setError(fileValidation.error)
         setLoading(false)
         return
@@ -220,33 +189,58 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
       // Create FormData for file upload
       const uploadData = new FormData()
       uploadData.append('title', formData.title)
-      uploadData.append('course', formData.course)
+      uploadData.append('course', formData.course) // Send ObjectId
       uploadData.append('academicYear', formData.academicYear)
       uploadData.append('semester', formData.semester)
       uploadData.append('level', formData.level)
-      uploadData.append('questionType', formData.questionType)
-      uploadData.append('difficultyLevel', formData.difficultyLevel)
-      uploadData.append('subjectArea', formData.subjectArea)
-      uploadData.append('institution', formData.institution)
-      uploadData.append('faculty', formData.faculty)
-      uploadData.append('department', formData.department)
       uploadData.append('tags', formData.tags)
       uploadData.append('description', formData.description)
       uploadData.append('file', formData.file)
 
+      console.log('Uploading to API...')
+      console.log('Token present:', !!token)
+      
       const newQuestion = await uploadQuestion(uploadData, token)
+      
+      console.log('Upload successful:', newQuestion)
+      
+      // Ensure error is cleared on successful upload
+      setError('')
       
       // Clear progress interval
       clearInterval(progressInterval)
       setUploadProgress(100)
       
+      // Reset form
+      setFormData({
+        title: '',
+        course: '',
+        academicYear: '',
+        semester: '1',
+        level: '100',
+        tags: '',
+        description: '',
+        file: null
+      })
+      setFileSelected(false)
+      
       if (onUpload) {
-        onUpload(uploadData)
+        onUpload(newQuestion)
       }
-      onCancel()
+      
+      // Show success message briefly before closing
+      setTimeout(() => {
+        onCancel()
+      }, 1000)
       
     } catch (err) {
-      setError(err.response?.data?.message || 'Failed to upload question. Please try again.')
+      console.error('=== Upload Error ===')
+      console.error('Error object:', err)
+      console.error('Error message:', err.message)
+      console.error('Error response:', err.response)
+      
+      const errorMsg = err.response?.data?.message || err.message || 'Failed to upload question. Please try again.'
+      setError(errorMsg)
       setUploadProgress(0)
     } finally {
       setLoading(false)
@@ -277,14 +271,21 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
       <div className={styles.authContainer}>
         <div className={styles.authCard}>
           <div className={styles.authHeader}>
-            <h2>Enhanced Past Question Upload</h2>
-            <p>Upload with comprehensive categorization fields</p>
+            <h2>Upload Past Question</h2>
+            <p>Upload a new past question with comprehensive details</p>
           </div>
 
           {error && (
             <div className={styles.authError}>
               <div className={styles.errorIcon}>!</div>
               <div className={styles.errorMessage}>{error}</div>
+            </div>
+          )}
+
+          {uploadProgress === 100 && !error && (
+            <div className={styles.successMessage}>
+              <FaCheck className={styles.successIcon} />
+              <div className={styles.successText}>Upload successful!</div>
             </div>
           )}
 
@@ -312,28 +313,16 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
                     maxLength="255"
                   />
                 </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="course" className={styles.formLabel}>
-                    Course <span className={styles.required}>*</span>
-                  </label>
-                  <select
-                    id="course"
-                    name="course"
-                    value={formData.course}
-                    onChange={handleInputChange}
-                    className={styles.formSelect}
-                    required
-                    disabled={loading}
-                  >
-                    {courseOptions.map(course => (
-                      <option key={course.value} value={course.value}>
-                        {course.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
               </div>
+
+              <CourseDropdown
+                value={formData.course}
+                onChange={handleCourseChange}
+                disabled={loading}
+                required={true}
+                label="Course"
+                placeholder="Select a course"
+              />
 
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
@@ -352,23 +341,6 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
                     disabled={loading}
                     pattern="[0-9]{4}\/[0-9]{4}"
                     title="Please enter academic year in format: 2023/2024"
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="institution" className={styles.formLabel}>
-                    Institution <span className={styles.required}>*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="institution"
-                    name="institution"
-                    value={formData.institution}
-                    onChange={handleInputChange}
-                    className={styles.formInput}
-                    placeholder="University/College name"
-                    required
-                    disabled={loading}
                   />
                 </div>
               </div>
@@ -415,104 +387,6 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
                     <option value="2">Second Semester</option>
                   </select>
                 </div>
-              </div>
-
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label htmlFor="questionType" className={styles.formLabel}>
-                    Question Type <span className={styles.required}>*</span>
-                  </label>
-                  <select
-                    id="questionType"
-                    name="questionType"
-                    value={formData.questionType}
-                    onChange={handleInputChange}
-                    className={styles.formSelect}
-                    required
-                    disabled={loading}
-                  >
-                    {questionTypes.map(type => (
-                      <option key={type.value} value={type.value}>
-                        {type.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="difficultyLevel" className={styles.formLabel}>
-                    Difficulty Level
-                  </label>
-                  <select
-                    id="difficultyLevel"
-                    name="difficultyLevel"
-                    value={formData.difficultyLevel}
-                    onChange={handleInputChange}
-                    className={styles.formSelect}
-                    disabled={loading}
-                  >
-                    {difficultyLevels.map(level => (
-                      <option key={level.value} value={level.value}>
-                        {level.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label htmlFor="subjectArea" className={styles.formLabel}>
-                    Subject Area <span className={styles.required}>*</span>
-                  </label>
-                  <select
-                    id="subjectArea"
-                    name="subjectArea"
-                    value={formData.subjectArea}
-                    onChange={handleInputChange}
-                    className={styles.formSelect}
-                    required
-                    disabled={loading}
-                  >
-                    {subjectAreas.map(area => (
-                      <option key={area.value} value={area.value}>
-                        {area.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="faculty" className={styles.formLabel}>
-                    Faculty
-                  </label>
-                  <input
-                    type="text"
-                    id="faculty"
-                    name="faculty"
-                    value={formData.faculty}
-                    onChange={handleInputChange}
-                    className={styles.formInput}
-                    placeholder="e.g., Science, Engineering"
-                    disabled={loading}
-                  />
-                </div>
-              </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="department" className={styles.formLabel}>
-                  Department
-                </label>
-                <input
-                  type="text"
-                  id="department"
-                  name="department"
-                  value={formData.department}
-                  onChange={handleInputChange}
-                  className={styles.formInput}
-                  placeholder="Specific department name"
-                  disabled={loading}
-                />
               </div>
             </div>
 
@@ -618,7 +492,7 @@ const UploadForm = ({ onUpload, onCancel, loading: externalLoading }) => {
                     )}
                   </div>
                   
-                  {loading && (
+                  {loading && uploadProgress > 0 && (
                     <div className={styles.uploadProgress}>
                       <div
                         className={styles.progressBar}

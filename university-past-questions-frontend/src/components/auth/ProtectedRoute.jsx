@@ -10,12 +10,12 @@ const ProtectedRoute = ({ children, requireAdmin = false }) => {
    const location = useLocation()
    const navigate = useNavigate()
 
-   
-   
+   console.log('ProtectedRoute: Checking access')
+   console.log('ProtectedRoute: loading:', loading, 'isAuthenticated:', isAuthenticated, 'requireAdmin:', requireAdmin, 'isAdmin:', isAdmin)
 
    // Show loading spinner while checking authentication
    if (loading) {
-     
+     console.log('ProtectedRoute: Showing loading spinner')
      return (
        <div className="auth-check-container">
          <LoadingSpinner
@@ -29,7 +29,7 @@ const ProtectedRoute = ({ children, requireAdmin = false }) => {
 
   // If not authenticated, redirect to login with return url
   if (!isAuthenticated) {
-    
+    console.log('ProtectedRoute: User not authenticated, redirecting to login')
     return (
       <Navigate
         to="/login"
@@ -41,7 +41,7 @@ const ProtectedRoute = ({ children, requireAdmin = false }) => {
 
   // If admin access is required but user is not admin
   if (requireAdmin && !isAdmin) {
-    
+    console.log('ProtectedRoute: User not admin, showing access denied')
     return (
       <div className={`access-denied ${requireAdmin ? 'admin-access-denied' : ''}`}>
         <div className="access-denied-content">
@@ -99,7 +99,7 @@ const ProtectedRoute = ({ children, requireAdmin = false }) => {
   }
 
   // User is authenticated (and admin if required), render children
-  
+  console.log('ProtectedRoute: Access granted, rendering children')
   return (
     <div className="access-granted">
       {children}

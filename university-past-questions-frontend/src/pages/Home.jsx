@@ -55,7 +55,7 @@ const Home = () => {
           students: 100 + Math.floor(Math.random() * 500)
         })
       } catch (error) {
-        
+        console.log('Using default stats:', error)
         setStats({
           pastQuestions: 245,
           courses: 32,

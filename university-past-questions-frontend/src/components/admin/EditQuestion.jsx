@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { FaSave, FaTimes, FaTrash, FaCheck, FaPlus } from 'react-icons/fa'
-import { getAllCourses } from '../../api/coursesApi'
+import { updateQuestion, deleteQuestion } from '../../api/pastQuestionsApi'
+import CourseDropdown from './CourseDropdown'
 import styles from './EditQuestion.module.css'
 
 const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
@@ -17,28 +18,12 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
-  const [courses, setCourses] = useState([])
-
-  // Fetch courses from database
-  useEffect(() => {
-    const fetchCourses = async () => {
-      try {
-        const response = await getAllCourses()
-        const coursesData = response.data || response
-        setCourses(Array.isArray(coursesData) ? coursesData : [])
-      } catch (err) {
-        
-        setError('Failed to load courses')
-      }
-    }
-
-    fetchCourses()
-  }, [])
 
   useEffect(() => {
     if (question) {
       setFormData({
         title: question.title || '',
+        // Handle both ObjectId reference and populated course object
         course: question.course?._id || question.course || '',
         academicYear: question.academicYear || '',
         semester: question.semester?.toString() || '1',
@@ -55,6 +40,14 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
       [name]: value
     }))
     // Clear error when user starts typing
+    if (error) setError('')
+  }
+
+  const handleCourseChange = (courseId) => {
+    setFormData(prev => ({
+      ...prev,
+      course: courseId
+    }))
     if (error) setError('')
   }
 
@@ -89,27 +82,75 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
     setError('')
 
     try {
-      // Call the parent component's save handler with form data
-      // The parent (AdminPanel) will handle the API call
-      await onSave(formData)
+      const token = localStorage.getItem('token')
+      
+      if (!token) {
+        setError('Authentication required. Please log in again.')
+        setLoading(false)
+        return
+      }
+
+      // Validate required fields
+      if (!formData.title || !formData.course || !formData.academicYear) {
+        setError('Please fill in all required fields (Title, Course, Academic Year)')
+        setLoading(false)
+        return
+      }
+
+      // Prepare update data - only send metadata, no file
+      const updateData = {
+        title: formData.title,
+        course: formData.course, // Send ObjectId
+        academicYear: formData.academicYear,
+        semester: formData.semester,
+        level: formData.level,
+        tags: formData.tags
+      }
+
+      const updatedQuestion = await updateQuestion(
+        question._id || question.id,
+        updateData,
+        token
+      )
       
       setSuccess(true)
-      // Close modal after successful save
       setTimeout(() => {
-        onCancel()
-      }, 1200)
+        onSave(updatedQuestion)
+      }, 800)
       
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to update question. Please try again.')
-      
+      console.error('Update error:', err)
     } finally {
       setLoading(false)
     }
   }
 
-  const handleDelete = () => {
-    if (window.confirm('Are you sure you want to delete this question? This action cannot be undone.')) {
+  const handleDelete = async () => {
+    if (!window.confirm('Are you sure you want to delete this question? This action cannot be undone.')) {
+      return
+    }
+
+    setLoading(true)
+    setError('')
+
+    try {
+      const token = localStorage.getItem('token')
+      
+      if (!token) {
+        setError('Authentication required. Please log in again.')
+        setLoading(false)
+        return
+      }
+
+      await deleteQuestion(question._id || question.id, token)
       onDelete(question._id || question.id)
+      
+    } catch (err) {
+      setError(err.response?.data?.message || 'Failed to delete question. Please try again.')
+      console.error('Delete error:', err)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -174,27 +215,14 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
             />
           </div>
 
-          <div className={styles.formGroup}>
-            <label htmlFor="course" className={styles.formLabel}>
-              Course *
-            </label>
-            <select
-              id="course"
-              name="course"
-              value={formData.course}
-              onChange={handleInputChange}
-              className={styles.formSelect}
-              required
-              disabled={loading}
-            >
-              <option value="">Select a course</option>
-              {courses.map(course => (
-                <option key={course._id} value={course._id}>
-                  {course.courseCode} - {course.courseName}
-                </option>
-              ))}
-            </select>
-          </div>
+          <CourseDropdown
+            value={formData.course}
+            onChange={handleCourseChange}
+            disabled={loading}
+            required={true}
+            label="Course"
+            placeholder="Select a course"
+          />
 
           <div className={styles.formGroup}>
             <label htmlFor="academicYear" className={styles.formLabel}>
@@ -210,6 +238,8 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               placeholder="e.g., 2022/2023"
               required
               disabled={loading}
+              pattern="[0-9]{4}\/[0-9]{4}"
+              title="Please enter academic year in format: 2023/2024"
             />
           </div>
 
@@ -269,7 +299,7 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
             <button 
               type="button" 
               onClick={addTag} 
-              className={styles.btnOutlineSm}
+              className={`${styles.btn} ${styles.btnOutline} ${styles.btnSm}`}
               disabled={loading || !tagInput.trim()}
             >
               <FaPlus />
@@ -294,6 +324,25 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
             )}
           </div>
         </div>
+
+        {/* File Information Display */}
+        {question.fileUrl && (
+          <div className={styles.fileInfo}>
+            <label className={styles.formLabel}>Current File</label>
+            <div className={styles.currentFile}>
+              <span className={styles.fileName}>
+                {question.fileType === 'pdf' ? '📄' : question.fileType === 'image' ? '🖼️' : '📝'} 
+                {' '}{question.title}.{question.fileType}
+              </span>
+              <span className={styles.fileSize}>
+                {question.fileSize ? `${(question.fileSize / 1024 / 1024).toFixed(2)} MB` : 'Unknown size'}
+              </span>
+            </div>
+            <small className={styles.helpText}>
+              Note: To change the file, please delete this question and upload a new one.
+            </small>
+          </div>
+        )}
 
         {/* Form Actions */}
         <div className={styles.formActions}>

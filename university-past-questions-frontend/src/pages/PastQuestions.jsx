@@ -71,7 +71,7 @@ const PastQuestions = () => {
         throw new Error(response.message || 'Failed to fetch filter options')
       }
     } catch (err) {
-      
+      console.error('Error fetching filter options:', err)
       // Use legacy options as fallback
       setFilterOptions({
         levels: legacyLevels,
@@ -100,7 +100,7 @@ const PastQuestions = () => {
         throw new Error(response.message || 'Failed to fetch questions')
       }
     } catch (err) {
-      
+      console.error('Error fetching questions:', err)
       setError('Failed to load past questions. Please try again.')
       setQuestions([])
     } finally {
@@ -120,9 +120,13 @@ const PastQuestions = () => {
       try {
         const items = JSON.parse(stored)
         setDownloadedItems(items)
-        ))
+        console.log('Loaded downloaded items:', items.map(item => ({
+          title: item.title,
+          thumbnail: item.thumbnail,
+          fileType: item.fileType
+        })))
       } catch (err) {
-        
+        console.error('Error loading downloaded items:', err)
       }
     }
   }, [])
@@ -233,7 +237,7 @@ const PastQuestions = () => {
       
       const downloadUrl = `${baseUrl}/uploads/${cleanFileUrl}`
       
-      
+      console.log('Downloading from:', downloadUrl, 'for file type:', question.fileType)
       
       // Create download link
       const link = document.createElement('a')
@@ -255,9 +259,9 @@ const PastQuestions = () => {
       if (question.fileType === 'image') {
         try {
           thumbnailUrl = await createImageThumbnail(downloadUrl)
-          
+          console.log('Created thumbnail for:', question.title)
         } catch (error) {
-          
+          console.warn('Failed to create thumbnail:', error)
           // Fallback to direct URL
           thumbnailUrl = downloadUrl
         }
@@ -282,10 +286,10 @@ const PastQuestions = () => {
       setDownloadedItems(updatedItems)
       localStorage.setItem('downloadedQuestions', JSON.stringify(updatedItems))
       
-      
+      console.log('Added to gallery:', downloadedItem)
       
     } catch (err) {
-      
+      console.error('Download error:', err)
     }
   }
 
@@ -313,7 +317,7 @@ const PastQuestions = () => {
       }, 500)
       
     } catch (err) {
-      
+      console.error('Delete error:', err)
       setDeletingItems(prev => {
         const newSet = new Set(prev)
         newSet.delete(itemId)
@@ -336,7 +340,7 @@ const PastQuestions = () => {
   const clearDownloadedGallery = () => {
     localStorage.removeItem('downloadedQuestions')
     setDownloadedItems([])
-    
+    console.log('Gallery cleared')
   }
 
   const getFileIcon = (fileType) => {
@@ -470,11 +474,11 @@ const PastQuestions = () => {
                             src={item.thumbnail}
                             alt={item.title}
                             onError={(e) => {
-                              
+                              console.error('Image failed to load:', item.thumbnail)
                               e.target.style.display = 'none'
                               e.target.nextSibling.style.display = 'flex'
                             }}
-                            onLoad={() => }
+                            onLoad={() => console.log('Image loaded successfully:', item.thumbnail)}
                           />
                           <div className="file-placeholder" style={{display: 'none'}}>
                             {getFileIcon(item.fileType)}

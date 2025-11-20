@@ -57,7 +57,7 @@ const Courses = () => {
           throw new Error(response.message || 'Failed to fetch courses')
         }
       } catch (err) {
-        
+        console.error('Error fetching courses:', err)
         setError("Failed to load courses. Please try again.")
       } finally {
         setLoading(false)

@@ -269,7 +269,7 @@ class TrafficHandlerConfig {
                 const envConfig = require(envConfigPath);
                 this.config = this.deepMerge(this.config, envConfig);
             } catch (error) {
-                
+                console.warn(`Failed to load environment config for ${this.environment}:`, error.message);
             }
         }
     }

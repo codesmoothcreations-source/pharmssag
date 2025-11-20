@@ -72,7 +72,7 @@ const getAllCourses = async (req, res) => {
             data: paginatedCourses
         });
     } catch (error) {
-        
+        console.error('Get courses error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error fetching courses',
@@ -113,7 +113,7 @@ const getSingleCourse = async (req, res) => {
             }
         });
     } catch (error) {
-        
+        console.error('Get single course error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error fetching course',
@@ -155,7 +155,7 @@ const createCourse = async (req, res) => {
             message: 'Course created successfully'
         });
     } catch (error) {
-        
+        console.error('Create course error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error creating course',
@@ -193,7 +193,7 @@ const updateCourse = async (req, res) => {
             message: 'Course updated successfully'
         });
     } catch (error) {
-        
+        console.error('Update course error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error updating course',
@@ -234,7 +234,7 @@ const deleteCourse = async (req, res) => {
             message: 'Course deleted successfully'
         });
     } catch (error) {
-        
+        console.error('Delete course error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error deleting course',

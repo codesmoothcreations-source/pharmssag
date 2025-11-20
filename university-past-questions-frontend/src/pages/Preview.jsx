@@ -24,7 +24,7 @@ const Preview = () => {
           setError(response.message || 'Question not found')
         }
       } catch (err) {
-        
+        console.error('Error fetching question:', err)
         setError('Failed to load question details')
       } finally {
         setLoading(false)
@@ -72,7 +72,7 @@ const Preview = () => {
           downloadCount: (question.downloadCount || 0) + 1
         }, localStorage.getItem('token'))
       } catch (err) {
-        
+        console.warn('Could not update download count:', err)
       }
 
       // Construct proper file URL
@@ -106,7 +106,7 @@ const Preview = () => {
       }))
 
     } catch (error) {
-      
+      console.error('Download failed:', error)
       alert('Download failed. Please try again.')
     } finally {
       setDownloading(false)
@@ -123,7 +123,7 @@ const Preview = () => {
           viewCount: (question.viewCount || 0) + 1
         }, localStorage.getItem('token'))
       } catch (err) {
-        
+        console.warn('Could not update view count:', err)
       }
 
       // Construct proper file URL
@@ -142,7 +142,7 @@ const Preview = () => {
       }))
 
     } catch (error) {
-      
+      console.error('View failed:', error)
       alert('Failed to view file. Please try again.')
     }
   }

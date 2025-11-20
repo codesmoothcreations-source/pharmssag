@@ -52,6 +52,38 @@ const pastQuestionSchema = new mongoose.Schema({
         type: String,
         trim: true
     }],
+    description: {
+        type: String,
+        trim: true,
+        maxlength: [1000, 'Description cannot be more than 1000 characters']
+    },
+    // Optional fields for enhanced categorization
+    questionType: {
+        type: String,
+        enum: ['exam', 'midterm', 'quiz', 'assignment', 'practical', 'paper', 'project'],
+        default: 'exam'
+    },
+    difficultyLevel: {
+        type: String,
+        enum: ['beginner', 'intermediate', 'advanced', 'expert'],
+        default: 'intermediate'
+    },
+    subjectArea: {
+        type: String,
+        trim: true
+    },
+    institution: {
+        type: String,
+        trim: true
+    },
+    faculty: {
+        type: String,
+        trim: true
+    },
+    department: {
+        type: String,
+        trim: true
+    },
     downloadCount: {
         type: Number,
         default: 0
@@ -78,6 +110,7 @@ const pastQuestionSchema = new mongoose.Schema({
 // Compound index for efficient searching and filtering
 pastQuestionSchema.index({ level: 1, semester: 1, course: 1 });
 pastQuestionSchema.index({ title: 'text', tags: 'text' });
+pastQuestionSchema.index({ isApproved: 1, createdAt: -1 });
 
 /**
  * Static method to get popular past questions
@@ -89,5 +122,16 @@ pastQuestionSchema.statics.getPopular = function() {
         .populate('course', 'courseCode courseName')
         .populate('uploader', 'name');
 };
+
+/**
+ * Pre-save middleware to process tags
+ */
+pastQuestionSchema.pre('save', function(next) {
+    // Convert comma-separated tags string to array if needed
+    if (this.tags && typeof this.tags === 'string') {
+        this.tags = this.tags.split(',').map(tag => tag.trim()).filter(tag => tag);
+    }
+    next();
+});
 
 module.exports = mongoose.model('PastQuestion', pastQuestionSchema);

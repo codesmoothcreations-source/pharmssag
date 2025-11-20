@@ -342,7 +342,7 @@ const gracefulShutdown = (signal) => {
     shuttingDown = true;
     
     logger.info(`Received ${signal}. Starting graceful shutdown...`);
-    
+    console.log(`\n⚠️  Shutting down servers...`.yellow.bold);
     
     let shutdownCount = 0;
     
@@ -350,14 +350,14 @@ const gracefulShutdown = (signal) => {
         server.close(() => {
             shutdownCount++;
             logger.info(`Server ${index + 1} closed successfully`);
-            
+            console.log(`✅ Server ${index + 1} closed`.green);
             
             if (shutdownCount === servers.length) {
                 // Close database connections
                 const mongoose = require('mongoose');
                 mongoose.connection.close();
                 logger.info('Database connection closed');
-                
+                console.log(`✅ Database connection closed`.green);
                 process.exit(0);
             }
         });
@@ -366,7 +366,7 @@ const gracefulShutdown = (signal) => {
     // Force shutdown after timeout
     setTimeout(() => {
         logger.error('Forced shutdown after timeout');
-        
+        console.log(`❌ Forced shutdown after timeout`.red.bold);
         process.exit(1);
     }, 10000);
 };
@@ -383,28 +383,28 @@ PORTS.forEach((PORT, index) => {
                 timestamp: new Date().toISOString()
             });
 
-            
-            
-            
-            
-            
-            
+            console.log(`\n🎓 University Past Questions Server ${index + 1} running in ${process.env.NODE_ENV} mode`.yellow.bold);
+            console.log(`📍 Server ${index + 1} started on port ${PORT}`.cyan.bold);
+            console.log(`🔗 API URL ${index + 1}: http://localhost:${PORT}/api`.green.underline);
+            console.log(`🏠 Home URL ${index + 1}: http://localhost:${PORT}/`.green.underline);
+            console.log(`📊 Health Check ${index + 1}: http://localhost:${PORT}/api/health`.blue.underline);
+            console.log(`📁 File Uploads ${index + 1}: http://localhost:${PORT}/uploads`.blue.underline);
         });
         
         servers.push(server);
     } catch (error) {
         logger.error(`Failed to start server ${index + 1} on port ${PORT}`, { error: error.message });
-        
+        console.error(`❌ Failed to start server ${index + 1} on port ${PORT}: ${error.message}`.red.bold);
     }
 });
 
 // Log server startup summary
 if (servers.length > 0) {
-    
-    }`.cyan.bold);
-    
+    console.log(`\n🚀 All servers started successfully`.green.bold);
+    console.log(`📊 Backend available on ports: ${PORTS.join(', ')}`.cyan.bold);
+    console.log(`🔗 Frontend should connect to: http://localhost:5000/api and http://localhost:5001/api`.yellow.bold);
 } else {
-    
+    console.error(`❌ Failed to start any servers`.red.bold);
     process.exit(1);
 }
 

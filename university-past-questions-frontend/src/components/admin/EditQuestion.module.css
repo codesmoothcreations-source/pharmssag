@@ -518,3 +518,45 @@
     font-size: 0.9rem;
   }
 }
+
+/* File Info Section */
+.fileInfo {
+  background: linear-gradient(135deg, #f8fff8 0%, #e9fff0 100%);
+  border: 1px solid rgba(31, 167, 80, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.currentFile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.fileName {
+  font-weight: 600;
+  color: #14803b;
+}
+
+.fileSize {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.helpText {
+  display: block;
+  margin-top: 0.5rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Button size variants */
+.btnSm {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+}

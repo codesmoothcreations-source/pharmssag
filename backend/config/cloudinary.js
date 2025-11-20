@@ -10,7 +10,7 @@ const configureCloudinary = () => {
         api_secret: process.env.CLOUDINARY_API_SECRET,
     });
 
-    
+    console.log('✅ Cloudinary configured successfully'.cyan.underline);
 };
 
 module.exports = { configureCloudinary, cloudinary };

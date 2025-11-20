@@ -23,9 +23,9 @@ const pastQuestionsService = {
 
   create: async (formData, token) => {
     try {
-      
-      
-      
+      console.log('pastQuestionsService.create called with:', formData);
+      console.log('API_URL:', API_URL);
+      console.log('Full URL:', `${API_URL}/past-questions`);
 
       const response = await axios.post(`${API_URL}/past-questions`, formData, {
         headers: {
@@ -34,22 +34,22 @@ const pastQuestionsService = {
         }
       });
 
-      
-      
+      console.log('Create response:', response);
+      console.log('Create response.data:', response.data);
 
       return response.data;
     } catch (error) {
-      
-      
+      console.error('pastQuestionsService.create error:', error);
+      console.error('Error response:', error.response?.data);
       throw new Error(error.response?.data?.message || 'Failed to create question');
     }
   },
 
   update: async (id, questionData, token) => {
     try {
-      
-      
-      
+      console.log('pastQuestionsService.update called with:', { id, questionData });
+      console.log('API_URL:', API_URL);
+      console.log('Full URL:', `${API_URL}/past-questions/${id}`);
 
       const response = await axios.put(`${API_URL}/past-questions/${id}`, questionData, {
         headers: {
@@ -58,13 +58,13 @@ const pastQuestionsService = {
         }
       });
 
-      
-      
+      console.log('Update response:', response);
+      console.log('Update response.data:', response.data);
 
       return response.data;
     } catch (error) {
-      
-      
+      console.error('pastQuestionsService.update error:', error);
+      console.error('Error response:', error.response?.data);
       throw new Error(error.response?.data?.message || 'Failed to update question');
     }
   },

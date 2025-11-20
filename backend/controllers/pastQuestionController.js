@@ -3,24 +3,41 @@ const Course = require('../models/Course');
 
 // Helper function to handle course creation/lookup
 const handleCourseReference = async (courseData) => {
-    if (!courseData || typeof courseData !== 'string') {
+    if (!courseData) {
         return null;
     }
 
     try {
-        let course = await Course.findOne({ courseCode: courseData.toUpperCase() });
-        if (!course) {
-            course = await Course.create({
-                courseCode: courseData.toUpperCase(),
-                courseName: courseData,
-                level: '100', // Default level
-                semester: '1'  // Default semester
-            });
-            
-        }
-        return course._id;
-    } catch (error) {
+        // Check if it's already a valid MongoDB ObjectId (24 character hex string)
+        const isObjectId = /^[0-9a-fA-F]{24}$/.test(courseData);
         
+        if (isObjectId) {
+            // It's an ObjectId, try to find the course by ID first
+            const course = await Course.findById(courseData);
+            if (course) {
+                console.log('Found course by ObjectId:', course.courseCode);
+                return course._id;
+            }
+        }
+        
+        // If not an ObjectId or ObjectId not found, treat as course code
+        if (typeof courseData === 'string') {
+            let course = await Course.findOne({ courseCode: courseData.toUpperCase() });
+            if (!course) {
+                course = await Course.create({
+                    courseCode: courseData.toUpperCase(),
+                    courseName: courseData,
+                    level: '100', // Default level
+                    semester: '1'  // Default semester
+                });
+                console.log('Auto-created course:', course.courseCode);
+            }
+            return course._id;
+        }
+        
+        return null;
+    } catch (error) {
+        console.error('Error handling course reference:', error);
         return null;
     }
 };
@@ -50,14 +67,14 @@ const getPastQuestions = async (req, res) => {
         const courseQuery = req.query.course || req.query.courseCode;
         if (courseQuery) {
             try {
-                
+                console.log('Filtering by course:', courseQuery);
                 // First find the course by code
                 const course = await Course.findOne({ courseCode: courseQuery.toUpperCase() });
                 if (course) {
                     query.course = course._id;
-                    
+                    console.log('Found course:', course.courseCode, 'ID:', course._id);
                 } else {
-                    
+                    console.log('Course not found:', courseQuery);
                     // If course not found, return empty results
                     return res.json({
                         success: true,
@@ -67,7 +84,7 @@ const getPastQuestions = async (req, res) => {
                     });
                 }
             } catch (error) {
-                
+                console.error('Error looking up course:', error);
                 return res.json({
                     success: true,
                     count: 0,
@@ -82,7 +99,7 @@ const getPastQuestions = async (req, res) => {
             query.$text = { $search: req.query.search };
         }
 
-        
+        console.log('Query:', query);
 
         // Pagination
         const page = parseInt(req.query.page) || 1;
@@ -100,7 +117,7 @@ const getPastQuestions = async (req, res) => {
         // Get total count for pagination
         const total = await PastQuestion.countDocuments(query);
 
-        
+        console.log('Found questions:', pastQuestions.length);
 
         res.json({
             success: true,
@@ -113,7 +130,7 @@ const getPastQuestions = async (req, res) => {
             data: pastQuestions
         });
     } catch (error) {
-        
+        console.error('Get past questions error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error',
@@ -149,7 +166,7 @@ const getPastQuestion = async (req, res) => {
             data: pastQuestion
         });
     } catch (error) {
-        
+        console.error('Get past question error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error',
@@ -165,15 +182,26 @@ const getPastQuestion = async (req, res) => {
  */
 const createPastQuestion = async (req, res) => {
     try {
-        
-        
-        
+        console.log('Creating past question with data:', req.body);
+        console.log('File:', req.file);
+        console.log('User:', req.user);
 
         // Check if file was uploaded
         if (!req.file) {
             return res.status(400).json({
                 success: false,
                 message: 'Please upload a file'
+            });
+        }
+
+        // Validate required fields
+        const requiredFields = ['title', 'course', 'academicYear', 'semester', 'level'];
+        const missingFields = requiredFields.filter(field => !req.body[field]);
+        
+        if (missingFields.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: `Missing required fields: ${missingFields.join(', ')}`
             });
         }
 
@@ -204,10 +232,15 @@ const createPastQuestion = async (req, res) => {
             }
         }
 
-        
+        // Process tags if they're a comma-separated string
+        if (req.body.tags && typeof req.body.tags === 'string') {
+            req.body.tags = req.body.tags.split(',').map(tag => tag.trim()).filter(tag => tag);
+        }
+
+        console.log('Final request body:', req.body);
 
         const pastQuestion = await PastQuestion.create(req.body);
-        
+        console.log('Created past question:', pastQuestion);
 
         // Populate the created past question
         const populatedPastQuestion = await PastQuestion.findById(pastQuestion._id)
@@ -221,13 +254,23 @@ const createPastQuestion = async (req, res) => {
                     (req.user.role !== 'admin' ? ' - Waiting for admin approval' : '')
         });
     } catch (error) {
+        console.error('Create past question error:', error);
+        console.error('Error details:', error.errors);
         
+        // Handle validation errors
+        if (error.name === 'ValidationError') {
+            const messages = Object.values(error.errors).map(err => err.message);
+            return res.status(400).json({
+                success: false,
+                message: 'Validation error',
+                errors: messages
+            });
+        }
         
         res.status(500).json({
             success: false,
             message: 'Server error creating past question',
-            error: error.message,
-            details: error.errors
+            error: error.message
         });
     }
 };
@@ -239,8 +282,8 @@ const createPastQuestion = async (req, res) => {
  */
 const updateQuestionMetadata = async (req, res) => {
     try {
-        
-        
+        console.log('Updating question metadata:', req.params.id);
+        console.log('Metadata update data:', req.body);
 
         let pastQuestion = await PastQuestion.findById(req.params.id);
 
@@ -259,20 +302,28 @@ const updateQuestionMetadata = async (req, res) => {
             });
         }
 
-        // Handle course field if it's a string
-        if (req.body.course && typeof req.body.course === 'string') {
-            const courseId = await handleCourseReference(req.body.course);
-            if (courseId) {
-                req.body.course = courseId;
-            } else {
-                return res.status(400).json({
-                    success: false,
-                    message: 'Invalid course reference'
-                });
+        // Handle course field if it's a string or needs conversion
+        if (req.body.course) {
+            if (typeof req.body.course === 'string' && !req.body.course.match(/^[0-9a-fA-F]{24}$/)) {
+                // It's a course code, not an ObjectId
+                const courseId = await handleCourseReference(req.body.course);
+                if (courseId) {
+                    req.body.course = courseId;
+                } else {
+                    return res.status(400).json({
+                        success: false,
+                        message: 'Invalid course reference'
+                    });
+                }
             }
         }
 
-        
+        // Process tags if they're a comma-separated string
+        if (req.body.tags && typeof req.body.tags === 'string') {
+            req.body.tags = req.body.tags.split(',').map(tag => tag.trim()).filter(tag => tag);
+        }
+
+        console.log('Final metadata update body:', req.body);
 
         pastQuestion = await PastQuestion.findByIdAndUpdate(
             req.params.id,
@@ -284,21 +335,31 @@ const updateQuestionMetadata = async (req, res) => {
         ).populate('course', 'courseCode courseName')
          .populate('uploader', 'name');
 
-        
+        console.log('Updated past question metadata:', pastQuestion);
 
         res.json({
             success: true,
             data: pastQuestion,
-            message: 'Past question metadata updated successfully'
+            message: 'Past question updated successfully'
         });
     } catch (error) {
+        console.error('Update question metadata error:', error);
+        console.error('Error details:', error.errors);
         
+        // Handle validation errors
+        if (error.name === 'ValidationError') {
+            const messages = Object.values(error.errors).map(err => err.message);
+            return res.status(400).json({
+                success: false,
+                message: 'Validation error',
+                errors: messages
+            });
+        }
         
         res.status(500).json({
             success: false,
-            message: 'Server error updating past question metadata',
-            error: error.message,
-            details: error.errors
+            message: 'Server error updating past question',
+            error: error.message
         });
     }
 };
@@ -310,9 +371,9 @@ const updateQuestionMetadata = async (req, res) => {
  */
 const updatePastQuestion = async (req, res) => {
     try {
-        
-        
-        
+        console.log('Updating past question:', req.params.id);
+        console.log('Update data:', req.body);
+        console.log('File:', req.file);
 
         let pastQuestion = await PastQuestion.findById(req.params.id);
 
@@ -331,16 +392,19 @@ const updatePastQuestion = async (req, res) => {
             });
         }
 
-        // Handle course field if it's a string
-        if (req.body.course && typeof req.body.course === 'string') {
-            const courseId = await handleCourseReference(req.body.course);
-            if (courseId) {
-                req.body.course = courseId;
-            } else {
-                return res.status(400).json({
-                    success: false,
-                    message: 'Invalid course reference'
-                });
+        // Handle course field if it's a string or needs conversion
+        if (req.body.course) {
+            if (typeof req.body.course === 'string' && !req.body.course.match(/^[0-9a-fA-F]{24}$/)) {
+                // It's a course code, not an ObjectId
+                const courseId = await handleCourseReference(req.body.course);
+                if (courseId) {
+                    req.body.course = courseId;
+                } else {
+                    return res.status(400).json({
+                        success: false,
+                        message: 'Invalid course reference'
+                    });
+                }
             }
         }
 
@@ -352,7 +416,12 @@ const updatePastQuestion = async (req, res) => {
             req.body.fileSize = req.file.size;
         }
 
-        
+        // Process tags if they're a comma-separated string
+        if (req.body.tags && typeof req.body.tags === 'string') {
+            req.body.tags = req.body.tags.split(',').map(tag => tag.trim()).filter(tag => tag);
+        }
+
+        console.log('Final update body:', req.body);
 
         pastQuestion = await PastQuestion.findByIdAndUpdate(
             req.params.id,
@@ -364,7 +433,7 @@ const updatePastQuestion = async (req, res) => {
         ).populate('course', 'courseCode courseName')
          .populate('uploader', 'name');
 
-        
+        console.log('Updated past question:', pastQuestion);
 
         res.json({
             success: true,
@@ -372,13 +441,23 @@ const updatePastQuestion = async (req, res) => {
             message: 'Past question updated successfully'
         });
     } catch (error) {
+        console.error('Update past question error:', error);
+        console.error('Error details:', error.errors);
         
+        // Handle validation errors
+        if (error.name === 'ValidationError') {
+            const messages = Object.values(error.errors).map(err => err.message);
+            return res.status(400).json({
+                success: false,
+                message: 'Validation error',
+                errors: messages
+            });
+        }
         
         res.status(500).json({
             success: false,
             message: 'Server error updating past question',
-            error: error.message,
-            details: error.errors
+            error: error.message
         });
     }
 };
@@ -415,7 +494,7 @@ const deletePastQuestion = async (req, res) => {
             message: 'Past question deleted successfully'
         });
     } catch (error) {
-        
+        console.error('Delete past question error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error deleting past question',
@@ -451,7 +530,7 @@ const approvePastQuestion = async (req, res) => {
             message: 'Past question approved successfully'
         });
     } catch (error) {
-        
+        console.error('Approve past question error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error approving past question',
@@ -485,7 +564,7 @@ const downloadPastQuestion = async (req, res) => {
         res.download(filePath, `${pastQuestion.title}.${pastQuestion.fileType === 'pdf' ? 'pdf' : pastQuestion.fileType === 'image' ? 'png' : 'doc'}`);
 
     } catch (error) {
-        
+        console.error('Download past question error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error downloading past question',
@@ -554,7 +633,7 @@ const getFilterOptions = async (req, res) => {
             }
         });
     } catch (error) {
-        
+        console.error('Get filter options error:', error);
         res.status(500).json({
             success: false,
             message: 'Server error fetching filter options',

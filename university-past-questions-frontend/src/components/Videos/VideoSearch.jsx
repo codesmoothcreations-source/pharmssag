@@ -47,7 +47,7 @@ function VideoSearch() {
         setVideos([]);
       }
     } catch (err) {
-      
+      console.error('Video search error:', err);
       setError('Failed to search videos. Please check your connection and try again.');
       setVideos([]);
     } finally {

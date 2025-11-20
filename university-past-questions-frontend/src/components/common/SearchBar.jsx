@@ -67,7 +67,7 @@ const SearchBar = ({
           navigate(`/search?q=${encodeURIComponent(query)}&type=${searchType}`)
         }
       } catch (error) {
-        
+        console.error('Search failed:', error)
       } finally {
         setLoading(false)
         setIsFocused(false)

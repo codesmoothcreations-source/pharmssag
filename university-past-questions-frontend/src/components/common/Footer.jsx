@@ -50,7 +50,7 @@ const Footer = () => {
       const recent = questions.slice(0, 3)
       setRecentQuestions(recent)
     } catch (error) {
-      
+      console.error('Error fetching footer data:', error)
       // Set default stats if API fails
       setStats({
         totalQuestions: 0,

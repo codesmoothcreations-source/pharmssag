@@ -21,7 +21,7 @@ const searchVideosEnhanced = async (req, res) => {
       maxResults
     } = req.query;
 
-    
+    console.log('Enhanced search query:', query || 'education tutorial');
 
     // Prepare search parameters
     const searchParams = {
@@ -67,7 +67,7 @@ const searchVideosEnhanced = async (req, res) => {
     });
 
   } catch (error) {
-    
+    console.error('Enhanced video search error:', error);
     
     // Always return a valid response even on error
     const fallbackResponse = getMockVideos('education', 'all', 'all', 12);

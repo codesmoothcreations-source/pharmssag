@@ -5,6 +5,7 @@ import EditQuestion from './EditQuestion'
 import { FaTachometerAlt, FaUpload, FaList, FaUsers, FaCog, FaEdit, FaTrash } from 'react-icons/fa'
 import { getAllQuestions, uploadQuestion, updateQuestion, deleteQuestion } from '../../api/pastQuestionsApi'
 import LoadingSpinner from '../common/LoadingSpinner'
+import { useToast } from '../common/Toast'
 import styles from './AdminPanel.module.css'
 
 const AdminPanel = () => {
@@ -14,6 +15,7 @@ const AdminPanel = () => {
   const [questions, setQuestions] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const { addToast, ToastContainer } = useToast()
 
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: FaTachometerAlt },
@@ -33,7 +35,7 @@ const AdminPanel = () => {
       setQuestions(Array.isArray(questionsData) ? questionsData : [])
     } catch (err) {
       setError('Failed to fetch questions: ' + (err.response?.data?.message || err.message))
-      
+      console.error('Error fetching questions:', err)
       setQuestions([])
     } finally {
       setLoading(false)
@@ -43,19 +45,22 @@ const AdminPanel = () => {
   // Handle upload new question with proper error handling
   const handleUpload = useCallback(async (formData) => {
     setLoading(true)
-    setError('')
+    // setError('')
     try {
       const token = localStorage.getItem('token')
       await uploadQuestion(formData, token)
       await fetchQuestions() // Refresh the list
       setShowUploadForm(false)
+      addToast('Question uploaded successfully!', 'success')
     } catch (err) {
-      setError('Failed to upload question: ' + (err.response?.data?.message || err.message))
-      
+      const errorMsg = err.response?.data?.message || 'Failed to upload question'
+      // setError(errorMsg)
+      // addToast(errorMsg, 'error')
+      console.error('Error uploading question:', err)
     } finally {
       setLoading(false)
     }
-  }, [fetchQuestions])
+  }, [fetchQuestions, addToast])
 
   // Handle save edited question
   const handleSaveEdit = useCallback(async (formData) => {
@@ -66,16 +71,23 @@ const AdminPanel = () => {
       await updateQuestion(editingQuestion._id, formData, token)
       await fetchQuestions() // Refresh the list
       setEditingQuestion(null)
+      addToast('Question updated successfully!', 'success')
     } catch (err) {
-      setError('Failed to update question: ' + (err.response?.data?.message || err.message))
-      
+      const errorMsg = err.response?.data?.message || 'Failed to update question'
+      setError(errorMsg)
+      addToast(errorMsg, 'error')
+      console.error('Error updating question:', err)
     } finally {
       setLoading(false)
     }
-  }, [editingQuestion?._id, fetchQuestions])
+  }, [editingQuestion?._id, fetchQuestions, addToast])
 
-  // Handle delete question (confirmation is handled by EditQuestion component)
+  // Handle delete question with confirmation
   const handleDeleteQuestion = useCallback(async (questionId) => {
+    if (!window.confirm('Are you sure you want to delete this question?')) {
+      return
+    }
+
     setLoading(true)
     setError('')
     try {
@@ -85,13 +97,16 @@ const AdminPanel = () => {
       if (editingQuestion?._id === questionId) {
         setEditingQuestion(null)
       }
+      addToast('Question deleted successfully!', 'success')
     } catch (err) {
-      setError('Failed to delete question: ' + (err.response?.data?.message || err.message))
-      
+      const errorMsg = err.response?.data?.message || 'Failed to delete question'
+      setError(errorMsg)
+      addToast(errorMsg, 'error')
+      console.error('Error deleting question:', err)
     } finally {
       setLoading(false)
     }
-  }, [editingQuestion?._id, fetchQuestions])
+  }, [editingQuestion?._id, fetchQuestions, addToast])
 
   // Handle menu item clicks
   const handleMenuClick = useCallback((sectionId) => {
@@ -104,6 +119,16 @@ const AdminPanel = () => {
       fetchQuestions()
     }
   }, [activeSection])
+
+  // Disable background scroll when modals are open
+  useEffect(() => {
+    if (showUploadForm || editingQuestion) {
+      document.body.style.overflow = 'hidden'
+      return () => {
+        document.body.style.overflow = 'unset'
+      }
+    }
+  }, [showUploadForm, editingQuestion])
 
   const renderQuestionsList = useCallback(() => {
     if (loading) return <LoadingSpinner text="Loading questions..." />
@@ -306,6 +331,9 @@ const AdminPanel = () => {
 
   return (
     <div className={styles.adminPanel} role="application" aria-label="Admin Panel">
+      {/* Toast Notifications */}
+      <ToastContainer />
+      
       {/* Sidebar */}
       <div className={styles.adminSidebar} role="navigation" aria-label="Admin navigation">
         <div className={styles.sidebarHeader}>

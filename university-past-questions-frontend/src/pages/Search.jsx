@@ -53,7 +53,7 @@ const Search = () => {
         throw new Error(response.message || 'Failed to fetch filter options')
       }
     } catch (err) {
-      
+      console.error('Error fetching filter options:', err)
       // Use legacy options as fallback
       setFilterOptions({
         levels: legacyLevels,
@@ -113,7 +113,7 @@ const Search = () => {
 
       setResults(allResults)
     } catch (error) {
-      
+      console.error('Search failed:', error)
     } finally {
       setLoading(false)
     }

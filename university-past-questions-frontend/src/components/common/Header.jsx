@@ -146,7 +146,21 @@ const Header = () => {
                 Admin Panel
               </Link>
             )}
-            {!isAuthenticated && (
+            {isAuthenticated ? (
+              <div className={styles.mobileAuth}>
+                <div className={styles.mobileUserInfo}>
+                  <FaUser className={styles.mobileUserIcon} />
+                  <span className={styles.mobileUserName}>
+                    {user?.name || user?.email?.split('@')[0] || 'User'}
+                  </span>
+                </div>
+                <Link to="/profile" className={`${styles.btn} ${styles.btnOutline}`}>Profile</Link>
+                {isAdmin && <Link to="/admin" className={`${styles.btn} ${styles.btnOutline}`}>Admin Panel</Link>}
+                <button onClick={handleLogout} className={`${styles.btn} ${styles.btnPrimary} ${styles.logoutButton}`}>
+                  Sign Out
+                </button>
+              </div>
+            ) : (
               <div className={styles.mobileAuth}>
                 <Link to="/login" className={`${styles.btn} ${styles.btnOutline}`}>Sign In</Link>
                 <Link to="/register" className={`${styles.btn} ${styles.btnPrimary}`}>Join Now</Link>

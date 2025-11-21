@@ -72,7 +72,7 @@ const Footer = () => {
   const quickLinks = [
     { path: "/", label: "Home" },
     { path: "/courses", label: "Courses" },
-    { path: "/search", label: "Search" },
+    { path: "/past-questions", label: "Past Questions" },
     { path: "/videos", label: "Video Tutorials" },
     { path: "/admin", label: "Admin Panel" }
   ]

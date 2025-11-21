@@ -15,7 +15,7 @@ const CourseDetail = React.lazy(() => import('./pages/CourseDetail'))
 const PastQuestions = React.lazy(() => import('./pages/PastQuestions'))
 const Preview = React.lazy(() => import('./pages/Preview'))
 const Videos = React.lazy(() => import('./pages/Videos'))
-const Search = React.lazy(() => import('./pages/Search'))
+
 const Admin = React.lazy(() => import('./pages/Admin'))
 const Login = React.lazy(() => import('./components/auth/Login'))
 const Register = React.lazy(() => import('./components/auth/Register'))
@@ -47,7 +47,6 @@ function App() {
                 <Route path="/past-questions" element={<PastQuestions />} />
                 <Route path="/preview/:id" element={<Preview />} />
                 <Route path="/videos" element={<Videos />} />
-                <Route path="/search" element={<Search />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
 

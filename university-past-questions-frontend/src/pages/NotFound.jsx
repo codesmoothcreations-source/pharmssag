@@ -6,7 +6,8 @@ import {
   FaArrowLeft, 
   FaGraduationCap, 
   FaBook,
-  FaExclamationTriangle 
+  FaExclamationTriangle,
+  FaVideo
 } from 'react-icons/fa'
 import './NotFound.css'
 
@@ -17,7 +18,7 @@ const NotFound = () => {
     { path: '/', label: 'Home', icon: FaHome, description: 'Go back to homepage' },
     { path: '/courses', label: 'Browse Courses', icon: FaGraduationCap, description: 'Explore all courses' },
     { path: '/past-questions', label: 'Past Questions', icon: FaBook, description: 'Find past exam papers' },
-    { path: '/search', label: 'Search', icon: FaSearch, description: 'Search for resources' }
+    { path: '/videos', label: 'Video Tutorials', icon: FaVideo, description: 'Watch educational videos' }
   ]
 
   const handleGoBack = () => {
@@ -64,9 +65,9 @@ const NotFound = () => {
               <FaHome />
               Go Home
             </Link>
-            <Link to="/search" className="btn btn-secondary btn-lg">
-              <FaSearch />
-              Browse Resources
+            <Link to="/past-questions" className="btn btn-secondary btn-lg">
+              <FaBook />
+              Browse Questions
             </Link>
           </div>
 
@@ -94,14 +95,20 @@ const NotFound = () => {
             </div>
           </div>
 
-          {/* Search Suggestion */}
-          <div className="search-suggestion">
+          {/* Resource Suggestion */}
+          <div className="resource-suggestion">
             <h4>Can't find what you're looking for?</h4>
-            <p>Try searching our database of past questions and video tutorials.</p>
-            <Link to="/search" className="btn btn-outline">
-              <FaSearch />
-              Search Resources
-            </Link>
+            <p>Browse our database of past questions and video tutorials.</p>
+            <div className="suggestion-buttons">
+              <Link to="/past-questions" className="btn btn-outline">
+                <FaBook />
+                Browse Questions
+              </Link>
+              <Link to="/videos" className="btn btn-outline">
+                <FaVideo />
+                Watch Videos
+              </Link>
+            </div>
           </div>
         </div>
       </div>

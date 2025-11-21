@@ -224,10 +224,10 @@ const Profile = () => {
                       className="form-select"
                     >
                       <option value="">Select Department</option>
-                      <option value="Pharmacy">Pharmacy</option>
-                      <option value="Medicine">Medicine</option>
+                      <option value="Pharmacy">Pharmssag</option>
+                      {/* <option value="Medicine">Medicine</option>
                       <option value="Nursing">Nursing</option>
-                      <option value="Other">Other</option>
+                      <option value="Other">Other</option> */}
                     </select>
                   ) : (
                     <p className="form-display">{user.department || 'Not specified'}</p>

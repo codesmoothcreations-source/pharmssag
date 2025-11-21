@@ -169,10 +169,7 @@ const Register = () => {
                 required
                 disabled={isLoading}
               >
-                <option value="Pharmacy">Pharmacy</option>
-                <option value="Medicine">Medicine</option>
-                <option value="Nursing">Nursing</option>
-                <option value="Other">Other</option>
+                <option value="Pharmacy">Pharmssag</option>
               </select>
             </div>
 

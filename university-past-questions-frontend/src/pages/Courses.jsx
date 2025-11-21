@@ -13,7 +13,7 @@ const Courses = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
 
-  const levels = ["100", "200", "300", "400", "500"]
+  const levels = ["100", "200", "300", "400"]
   const semesters = ["1", "2"]
   const sortOptions = [
     { value: "name", label: "Name A-Z" },
@@ -82,8 +82,7 @@ const Courses = () => {
       '100': 'bg-blue-500',
       '200': 'bg-green-500',
       '300': 'bg-yellow-500',
-      '400': 'bg-orange-500',
-      '500': 'bg-red-500'
+      '400': 'bg-orange-500'
     }
     return colors[level] || 'bg-gray-500'
   }
@@ -122,13 +121,10 @@ const Courses = () => {
             <span className="stat-number">{courses.length}</span>
             <span className="stat-label">Courses</span>
           </div>
+          <br />
           <div className="stat-badge">
             <span className="stat-number">{totalQuestions}</span>
             <span className="stat-label">Questions</span>
-          </div>
-          <div className="stat-badge">
-            <span className="stat-number">{totalDownloads}</span>
-            <span className="stat-label">Downloads</span>
           </div>
         </div>
 

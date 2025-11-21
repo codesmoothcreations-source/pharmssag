@@ -80,14 +80,12 @@ const Footer = () => {
   const resourceLinks = [
     { path: "/past-questions", label: "Past Questions", count: stats.totalQuestions },
     { path: "/videos", label: "Video Tutorials", count: stats.totalVideos },
-    { path: "/study-guides", label: "Study Guides" },
-    { path: "/exam-tips", label: "Exam Tips" }
   ]
 
   const contactInfo = [
-    { type: "email", value: "support@pharmacyuniversity.edu", display: "📧 support@pharmacyuniversity.edu" },
-    { type: "phone", value: "+233 123 456 789", display: "📞 +233 123 456 789" },
-    { type: "location", value: "Pharmacy Department, University Campus", display: "📍 Pharmacy Department, University Campus" }
+    { type: "email", value: "support@pharmacyuniversity.edu", display: "📧 Pharmssag@university.edu" },
+    { type: "phone", value: "+233 123 456 789", display: "📞 +233 55 160 3553" },
+    { type: "location", value: "Pharmacy Department, University Campus", display: "📍 Pharmssag, Past Question "}
   ]
 
   return (
@@ -99,7 +97,7 @@ const Footer = () => {
             <div className="footer-brand">
               <FaGraduationCap className="brand-icon" />
               <div className="brand-text">
-                <h3>University Past Questions</h3>
+                <h3>Pharmssag, Past Question </h3>
                 <p>Your trusted platform for academic excellence and success.</p>
               </div>
             </div>
@@ -213,12 +211,12 @@ const Footer = () => {
             </div>
             
             {/* API Status */}
-            <div className="api-status">
+            {/* <div className="api-status">
               <div className={`status-indicator ${loading ? 'loading' : 'online'}`}>
                 {loading ? '🔄 Connecting...' : '✅ API Online'}
               </div>
               <small>Backend v1.0.0 | Port: 5001</small>
-            </div>
+            </div> */}
           </div>
         </div>
 

@@ -18,6 +18,8 @@
   }
 }
 
+
+/* Need to work on it =============================================================== */
 .adminSidebar {
   width: 280px;
   background: rgba(255, 255, 255, 0.95);
@@ -25,10 +27,11 @@
   border-right: 1px solid rgba(28, 166, 92, 0.1);
   box-shadow: 4px 0 20px rgba(28, 166, 92, 0.08);
   padding: 0;
-  position: fixed;
+  position: absolute;
   height: 100vh;
   z-index: 100;
   animation: slideInLeft 0.5s ease-out;
+  /* border: 2px red solid; */
 }
 
 @keyframes slideInLeft {
@@ -173,9 +176,14 @@
 }
 
 .btnPrimary {
+  font-family: 'Josefin Sans', sans-serif;
   background: #1ca65c;
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(28, 166, 92, 0.3);
+  padding: 7px;
+  border: 1px solid #1ca65c;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
 }
 
 .btnPrimary:hover:not(:disabled) {

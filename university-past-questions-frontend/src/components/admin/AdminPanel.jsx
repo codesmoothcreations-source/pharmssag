@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import AdminDashboard from './AdminDashboard'
+// import AdminDashboard from './AdminDashboard'
 import UploadForm from './UploadForm'
 import EditQuestion from './EditQuestion'
 import { FaTachometerAlt, FaUpload, FaList, FaUsers, FaCog, FaEdit, FaTrash } from 'react-icons/fa'
@@ -18,7 +18,7 @@ const AdminPanel = () => {
   const { addToast, ToastContainer } = useToast()
 
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: FaTachometerAlt },
+    // { id: 'dashboard', label: 'Dashboard', icon: FaTachometerAlt },
     { id: 'questions', label: 'Manage Questions', icon: FaList },
     { id: 'users', label: 'User Management', icon: FaUsers },
     { id: 'settings', label: 'Settings', icon: FaCog }
@@ -169,7 +169,7 @@ const AdminPanel = () => {
                 <th scope="col">Title</th>
                 <th scope="col">Course</th>
                 <th scope="col">Year</th>
-                <th scope="col">Department</th>
+                <th scope="col">Level</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
@@ -212,7 +212,7 @@ const AdminPanel = () => {
   const renderContent = useCallback(() => {
     switch (activeSection) {
       case 'dashboard':
-        return <AdminDashboard />
+        // return <AdminDashboard />
       case 'questions':
         return (
           <div className={styles.questionsManagement} role="region" aria-label="Questions management">
@@ -317,7 +317,7 @@ const AdminPanel = () => {
           </div>
         )
       default:
-        return <AdminDashboard />
+        // return <AdminDashboard />
     }
   }, [activeSection, loading, renderQuestionsList])
 

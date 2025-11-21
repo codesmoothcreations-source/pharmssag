@@ -36,9 +36,8 @@ const PastQuestions = () => {
   const [sortBy, setSortBy] = useState('newest')
 
   // Legacy filter options (fallback)
-  const legacyLevels = ['100', '200', '300', '400', '500']
+  const legacyLevels = ['100', '200', '300', '400']
   const semesters = ['1', '2']
-  const departments = ['Pharmacy', 'Medicine', 'Nursing', 'Dentistry']
   const years = ['2024', '2023', '2022', '2021', '2020']
 
   const sortOptions = [
@@ -46,7 +45,6 @@ const PastQuestions = () => {
     { value: 'oldest', label: 'Oldest First' },
     { value: 'title', label: 'Title A-Z' },
     { value: 'level', label: 'Level Order' },
-    { value: 'year', label: 'Academic Year' },
     { value: 'downloads', label: 'Most Downloaded' },
     { value: 'views', label: 'Most Viewed' }
   ]
@@ -76,7 +74,6 @@ const PastQuestions = () => {
       setFilterOptions({
         levels: legacyLevels,
         semesters: ['1', '2'],
-        departments: ['Pharmacy', 'Medicine', 'Nursing', 'Dentistry'],
         academicYears: ['2023/2024', '2022/2023', '2021/2022', '2020/2021', '2019/2020'],
         courses: []
       })
@@ -575,21 +572,6 @@ const PastQuestions = () => {
                 <option value="">All Semesters</option>
                 {(filterOptions.semesters.length > 0 ? filterOptions.semesters : semesters).map(semester => (
                   <option key={semester} value={semester}>Semester {semester}</option>
-                ))}
-              </select>
-            </div>
-
-            <div className="filter-group">
-              <label>Department</label>
-              <select
-                value={selectedDepartment}
-                onChange={(e) => setSelectedDepartment(e.target.value)}
-                className="filter-select"
-                disabled={loadingFilters}
-              >
-                <option value="">All Departments</option>
-                {(filterOptions.departments.length > 0 ? filterOptions.departments : departments).map(dept => (
-                  <option key={dept} value={dept}>{dept}</option>
                 ))}
               </select>
             </div>

@@ -260,7 +260,7 @@ const EditQuestion = ({ question, onSave, onCancel, onDelete }) => {
               <option value="200">Level 200</option>
               <option value="300">Level 300</option>
               <option value="400">Level 400</option>
-              <option value="500">Level 500</option>
+              {/* <option value="500">Level 500</option> */}
             </select>
           </div>
 

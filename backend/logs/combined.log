@@ -16751,387 +16751,11 @@
   timestamp: '2025-11-21T09:24:10.214Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:00 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:00.766Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:00 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:00.797Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:00 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:00.908Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:01 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:01.048Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:01 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:01.146Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:01 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:01.168Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:14 +0000] "POST /api/auth/login HTTP/1.1" 200 363 "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:14.226Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:14 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:14.686Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:14 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:14.816Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:33 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:33.441Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:30:33 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:30:33.591Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:34:22 +0000] "POST /api/auth/login HTTP/1.1" 200 371 "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:34:22.587Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:34:22 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:34:22.663Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:34:22 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:34:22.723Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:34:37 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:34:37.430Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:17 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:17.959Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:17 +0000] "GET /api/auth/me HTTP/1.1" 200 262 "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:17.995Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:18 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:18.246Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:18 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:18.723Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:18 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:18.910Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:18 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:18.971Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:20 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:20.862Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:30 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:30.468Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:30 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:30.871Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:34 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:34.260Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:34 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:34.410Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:41 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:41.975Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:45 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:45.519Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:45 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:45.782Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:49 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:49.696Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:49 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:49.930Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:54 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:54.367Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:54 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:54.705Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:54 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:54.780Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:54 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:54.869Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:54 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:54.933Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:55 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:55.047Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:55 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:55.317Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:35:55 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:35:55.488Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:36:28 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:36:28.156Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:36:28 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:36:28.259Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:37:31 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:37:31.299Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:37:31 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Mobile Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:37:31.316Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:09 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:09.725Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:10 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:10.220Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:10 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:10.689Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:10 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:10.939Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:10 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:10.969Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:11 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:11.952Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:12 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:12.005Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:39:12 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:39:12.265Z'
-}
-{
-  ip: '127.0.0.1',
-  level: 'info',
-  message: 'Detailed health check requested',
-  timestamp: '2025-11-21T15:44:18.321Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:44:18 +0000] "GET /api/health HTTP/1.1" 200 274 "-" "curl/8.16.0"',
-  level: 'info',
-  timestamp: '2025-11-21T15:44:18.326Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:22 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:22.410Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:25.293Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:25 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:25.452Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:25.506Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:25 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:25.598Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:25.862Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:26 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:26.278Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:26 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:26.821Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:27 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:27.284Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:29 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:29.092Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:29 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:29.306Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:29 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:29.428Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:29 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:29.495Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:32 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:32.995Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:33 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:33.247Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:40 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:40.412Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:40 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:40.470Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:40 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:40.500Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:41 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:41.740Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:41 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:41.843Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:15:45:41 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
-  level: 'info',
-  timestamp: '2025-11-21T15:45:41.891Z'
-}
-{
-  message: 'Received SIGINT. Starting graceful shutdown...',
-  level: 'info',
-  timestamp: '2025-11-21T16:00:26.662Z'
-}
-{
   port: 5000,
   host: '0.0.0.0',
   environment: 'development',
   version: '1.0.0',
-  timestamp: '2025-11-21T16:17:02.320Z',
+  timestamp: '2025-11-21T17:33:47.124Z',
   level: 'info',
   message: 'Server 1 initialization completed'
 }
@@ -17140,59 +16764,376 @@
   host: '0.0.0.0',
   environment: 'development',
   version: '1.0.0',
-  timestamp: '2025-11-21T16:17:02.332Z',
+  timestamp: '2025-11-21T17:33:47.193Z',
   level: 'info',
   message: 'Server 2 initialization completed'
 }
 {
-  ip: '127.0.0.1',
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:09 +0000] "GET /api/past-questions HTTP/1.1" 200 715 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  message: 'Detailed health check requested',
-  timestamp: '2025-11-21T16:17:26.875Z'
+  timestamp: '2025-11-21T17:34:09.350Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:17:26 +0000] "GET /api/health HTTP/1.1" 200 271 "-" "curl/8.16.0"',
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:09 +0000] "GET /api/videos/search HTTP/1.1" 200 246 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:17:26.883Z'
+  timestamp: '2025-11-21T17:34:09.422Z'
 }
 {
-  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5000',
-  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5000\n' +
-    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
-    '    at listenInCluster (node:net:1997:12)\n' +
-    '    at node:net:2206:7\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
-  level: 'error',
-  message: 'Uncaught Exception',
-  timestamp: '2025-11-21T16:18:07.076Z'
-}
-{
-  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5001',
-  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5001\n' +
-    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
-    '    at listenInCluster (node:net:1997:12)\n' +
-    '    at node:net:2206:7\n' +
-    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
-  level: 'error',
-  message: 'Uncaught Exception',
-  timestamp: '2025-11-21T16:18:07.099Z'
-}
-{
-  message: '127.0.0.1 - - [21/Nov/2025:16:19:16 +0000] "GET /api/courses HTTP/1.1" 200 5069 "-" "curl/8.16.0"',
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:10 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:19:16.835Z'
+  timestamp: '2025-11-21T17:34:10.013Z'
 }
 {
-  message: 'Received SIGINT. Starting graceful shutdown...',
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:10 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:19:54.026Z'
+  timestamp: '2025-11-21T17:34:10.102Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:10 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:10.626Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:11 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:11.191Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:17 +0000] "GET /api/courses? HTTP/1.1" 200 5113 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:17.795Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:20 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:20.134Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:22 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:22.313Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:22 +0000] "GET /api/past-questions/filters HTTP/1.1" 200 4734 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:22.548Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:22 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:22.899Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:23 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:23.383Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:27 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 200 237 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:27.186Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:27 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:27.231Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:29 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:29.834Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:29 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:29.991Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:30 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:30.379Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:30 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:30.431Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:30 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:30.914Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:30 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:30.951Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:40 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:40.100Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:40 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:40.438Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:40 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:40.626Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:41 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:41.335Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:43 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:43.740Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:43 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:43.782Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:44 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:44.298Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:44 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:44.324Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:44 +0000] "GET /api/past-questions/692094fc24e76659ab56ce22 HTTP/1.1" 200 692 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:44.463Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:45 +0000] "GET /api/past-questions/692094fc24e76659ab56ce22 HTTP/1.1" 200 692 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:45.037Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:45 +0000] "PUT /api/past-questions/692094fc24e76659ab56ce22/metadata HTTP/1.1" 401 54 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:45.785Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:34:46 +0000] "GET /uploads/file-1763742971522-765325404.docx HTTP/1.1" 200 167315 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:34:46.202Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:19 +0000] "PUT /api/past-questions/692094fc24e76659ab56ce22/metadata HTTP/1.1" 401 54 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:19.960Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:20 +0000] "GET /uploads/file-1763742971522-765325404.docx HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:20.041Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:25 +0000] "GET /api/past-questions HTTP/1.1" 200 715 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:25.603Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:25 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:25.900Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:26 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:26.191Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:26 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:26.830Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:31 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:31.428Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:31 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:31.770Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:31 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:31.793Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:31 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:31.959Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:31 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:31.985Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:32 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:32.450Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:32 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:32.650Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:35:32 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:35:32.951Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:19 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:19.006Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:19 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:19.025Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:19 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:19.336Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:19 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:19.559Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:19 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:19.669Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:20 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:20.144Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:20 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:20.201Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:37:20 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:37:20.695Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:38:06 +0000] "POST /api/auth/login HTTP/1.1" 200 363 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:38:06.851Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:38:07 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:38:07.636Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:38:08 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:38:08.209Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:38:19 +0000] "GET /api/courses HTTP/1.1" 200 5113 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:38:19.513Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:38:22 +0000] "GET /api/courses HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:38:22.370Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:38:26 +0000] "GET /api/courses HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:38:26.094Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:17:38:31 +0000] "GET /api/courses HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T17:38:31.195Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:03:20 +0000] "GET /api/past-questions HTTP/1.1" 500 117 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:03:20.428Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:03:38 +0000] "GET /api/past-questions HTTP/1.1" - - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:03:38.498Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:03:39 +0000] "GET /api/past-questions HTTP/1.1" 500 117 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:03:39.734Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:03:40 +0000] "GET /api/past-questions HTTP/1.1" 500 117 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:03:40.365Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:03:40 +0000] "GET /api/past-questions HTTP/1.1" 500 117 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:03:40.380Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:04:09 +0000] "GET /api/past-questions HTTP/1.1" 500 117 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:04:09.050Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:04:09 +0000] "GET /api/auth/me HTTP/1.1" 401 58 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:04:09.398Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:04:13 +0000] "GET /api/courses? HTTP/1.1" 500 134 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:04:13.958Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:04:21 +0000] "GET /api/past-questions/filters HTTP/1.1" 500 141 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:04:21.988Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:04:29 +0000] "GET /api/past-questions HTTP/1.1" 500 117 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:04:29.355Z'
+}
+{
+  message: '127.0.0.1 - - [21/Nov/2025:18:04:29 +0000] "GET /api/auth/me HTTP/1.1" 401 58 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-21T18:04:29.361Z'
 }
 {
   port: 5000,
   host: '0.0.0.0',
   environment: 'development',
   version: '1.0.0',
-  timestamp: '2025-11-21T16:22:13.002Z',
+  timestamp: '2025-11-23T00:32:21.671Z',
   level: 'info',
   message: 'Server 1 initialization completed'
 }
@@ -17201,111 +17142,1026 @@
   host: '0.0.0.0',
   environment: 'development',
   version: '1.0.0',
-  timestamp: '2025-11-21T16:22:13.074Z',
+  timestamp: '2025-11-23T00:32:21.689Z',
   level: 'info',
   message: 'Server 2 initialization completed'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:01 +0000] "GET /api/past-questions HTTP/1.1" 200 80 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:32:43 +0000] "GET /api/past-questions HTTP/1.1" 200 715 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:01.869Z'
+  timestamp: '2025-11-23T00:32:43.269Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:02 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:32:43 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:02.235Z'
+  timestamp: '2025-11-23T00:32:43.287Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:02 +0000] "GET /api/past-questions/filters HTTP/1.1" 200 101 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:32:43 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:02.355Z'
+  timestamp: '2025-11-23T00:32:43.821Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:03 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:32:43 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:03.099Z'
+  timestamp: '2025-11-23T00:32:43.837Z'
 }
 {
-  port: 5000,
-  host: '0.0.0.0',
-  environment: 'development',
-  version: '1.0.0',
-  timestamp: '2025-11-21T16:24:07.832Z',
+  message: '127.0.0.1 - - [23/Nov/2025:00:33:34 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  message: 'Server 1 initialization completed'
+  timestamp: '2025-11-23T00:33:34.043Z'
 }
 {
-  port: 5001,
-  host: '0.0.0.0',
-  environment: 'development',
-  version: '1.0.0',
-  timestamp: '2025-11-21T16:24:07.847Z',
+  message: '127.0.0.1 - - [23/Nov/2025:00:33:34 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  message: 'Server 2 initialization completed'
+  timestamp: '2025-11-23T00:33:34.056Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:10 +0000] "GET /api/courses? HTTP/1.1" 200 62 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:33:34 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:10.566Z'
+  timestamp: '2025-11-23T00:33:34.848Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:11 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:33:34 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:11.006Z'
+  timestamp: '2025-11-23T00:33:34.866Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:11 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:33:35 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:11.321Z'
+  timestamp: '2025-11-23T00:33:35.359Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:11 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:33:36 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:11.344Z'
+  timestamp: '2025-11-23T00:33:36.079Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:11 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:27 +0000] "POST /api/auth/register HTTP/1.1" 201 369 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:11.361Z'
+  timestamp: '2025-11-23T00:36:27.350Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:11 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:27 +0000] "POST /api/auth/login HTTP/1.1" 200 357 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:11.703Z'
+  timestamp: '2025-11-23T00:36:27.669Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:11 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:29 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:11.870Z'
+  timestamp: '2025-11-23T00:36:29.086Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:12 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:29 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:12.028Z'
+  timestamp: '2025-11-23T00:36:29.537Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:12 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:58 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:12.339Z'
+  timestamp: '2025-11-23T00:36:58.164Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:13 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:58 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:13.105Z'
+  timestamp: '2025-11-23T00:36:58.185Z'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:24:27 +0000] "POST /api/auth/login HTTP/1.1" 401 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:58 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:24:27.987Z'
+  timestamp: '2025-11-23T00:36:58.685Z'
 }
 {
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:58 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:36:58.696Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:59 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:36:59.177Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:59 +0000] "GET /api/auth/me HTTP/1.1" 200 248 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:36:59.181Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:59 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:36:59.501Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:36:59 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:36:59.692Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:37:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:37:25.228Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:37:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:37:25.741Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:38:11 +0000] "POST /api/auth/login HTTP/1.1" 401 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:38:11.805Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:38:16 +0000] "POST /api/auth/login HTTP/1.1" 200 357 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:38:16.300Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:38:16 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:38:16.837Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:38:17 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:38:17.344Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:41:16 +0000] "POST /api/auth/register HTTP/1.1" 201 372 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:41:16.768Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:41:17 +0000] "POST /api/auth/login HTTP/1.1" 200 360 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:41:17.090Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:41:17 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:41:17.844Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:41:18 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:41:18.364Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:35 +0000] "POST /api/auth/login HTTP/1.1" 200 360 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:35.677Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:36 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:36.270Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:36 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:36.807Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:41 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:41.373Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:41 +0000] "GET /api/past-questions/filters HTTP/1.1" 200 4734 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:41.817Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:42 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:42.033Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:43 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:43.044Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:45 +0000] "GET /uploads/file-1763742971522-765325404.docx HTTP/1.1" 200 167315 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:45.670Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:42:52 +0000] "GET /uploads/file-1763742971522-765325404.docx HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:42:52.797Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:43:24 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:43:24.471Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:43:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:43:25.050Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:45:59 +0000] "POST /api/auth/register HTTP/1.1" 201 369 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:45:59.797Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:46:00 +0000] "POST /api/auth/login HTTP/1.1" 200 357 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:46:00.138Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:46:00 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:46:00.778Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:46:01 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:46:01.325Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:46:36 +0000] "POST /api/auth/login HTTP/1.1" 200 357 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:46:36.837Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:46:37 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:46:37.373Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:46:37 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:46:37.851Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:47:27 +0000] "POST /api/auth/register HTTP/1.1" 201 372 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:47:27.531Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:47:27 +0000] "POST /api/auth/login HTTP/1.1" 200 360 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:47:27.832Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:47:28 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:47:28.414Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:47:28 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:47:28.911Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:47:47 +0000] "POST /api/auth/login HTTP/1.1" 200 360 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:47:47.489Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:47:48 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:47:48.114Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:47:48 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:47:48.701Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:48:46 +0000] "POST /api/auth/register HTTP/1.1" 201 386 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:48:46.341Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:48:46 +0000] "POST /api/auth/login HTTP/1.1" 200 374 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:48:46.635Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:48:47 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:48:47.218Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:48:47 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:48:47.707Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:49:25 +0000] "POST /api/auth/login HTTP/1.1" 200 374 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:49:25.009Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:49:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:49:25.585Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:49:26 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:49:26.136Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:50:23 +0000] "POST /api/auth/register HTTP/1.1" 201 370 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:50:23.771Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:50:24 +0000] "POST /api/auth/login HTTP/1.1" 200 358 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:50:24.153Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:50:24 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:50:24.720Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:50:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:50:25.235Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:51:00 +0000] "POST /api/auth/login HTTP/1.1" 200 358 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:51:00.425Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:51:01 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:51:01.225Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:51:01 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:51:01.838Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:51:57 +0000] "POST /api/auth/register HTTP/1.1" 400 65 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:51:57.440Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:53:34 +0000] "POST /api/auth/register HTTP/1.1" 201 373 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:53:34.697Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:53:34 +0000] "POST /api/auth/login HTTP/1.1" 200 361 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:53:34.978Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:53:35 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:53:35.568Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:53:36 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:53:36.096Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:53:59 +0000] "POST /api/auth/login HTTP/1.1" 200 361 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:53:59.185Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:53:59 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:53:59.788Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:54:00 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:54:00.423Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:54:54 +0000] "POST /api/auth/register HTTP/1.1" 201 381 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:54:54.025Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:54:54 +0000] "POST /api/auth/login HTTP/1.1" 200 369 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:54:54.390Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:54:54 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:54:54.996Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:54:55 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:54:55.525Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:55:21 +0000] "POST /api/auth/login HTTP/1.1" 200 369 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:55:21.316Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:55:21 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:55:21.814Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:55:22 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:55:22.343Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:08 +0000] "POST /api/auth/register HTTP/1.1" 201 375 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:08.942Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:09 +0000] "POST /api/auth/login HTTP/1.1" 200 363 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:09.228Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:09 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:09.831Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:10 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:10.282Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:34 +0000] "POST /api/auth/login HTTP/1.1" 200 363 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:34.947Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:35 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:35.487Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:35 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:35.978Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:56 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:56.578Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:56 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:56.586Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:57 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:57.148Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:56:57 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:56:57.155Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:57:34 +0000] "POST /api/auth/register HTTP/1.1" 201 377 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:57:34.861Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:57:35 +0000] "POST /api/auth/login HTTP/1.1" 200 365 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:57:35.193Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:57:35 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:57:35.872Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:57:36 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:57:36.345Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:57:52 +0000] "POST /api/auth/login HTTP/1.1" 200 365 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:57:52.563Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:57:53 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:57:53.137Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:57:53 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:57:53.588Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:58:18 +0000] "POST /api/auth/login HTTP/1.1" 200 363 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:58:18.043Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:58:18 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:58:18.705Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:00:58:19 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T00:58:19.256Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:42 +0000] "GET /api/auth/me HTTP/1.1" 200 255 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:42.177Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:42 +0000] "GET /api/past-questions HTTP/1.1" 200 663 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:42.342Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:42 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:42.354Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:42 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:42.498Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:42 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:42.953Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:42 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:42.960Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:43 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:43.537Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:04:44 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:04:44.059Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:06:10 +0000] "POST /api/auth/register HTTP/1.1" 201 376 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:06:10.997Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:06:11 +0000] "POST /api/auth/login HTTP/1.1" 200 364 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:06:11.293Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:06:11 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:06:11.823Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:06:12 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:06:12.332Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:06:34 +0000] "POST /api/auth/login HTTP/1.1" 200 364 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:06:34.112Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:06:34 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:06:34.685Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:06:35 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:06:35.212Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:25 +0000] "GET /api/auth/me HTTP/1.1" 200 256 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:25.626Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:25.758Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:25 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:25.766Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:26 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:26.003Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:26 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:26.268Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:26 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:26.278Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:26 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:26.792Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:27 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:27.310Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:33 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:33.317Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:44 +0000] "GET /api/courses HTTP/1.1" 200 5113 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:44.895Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:47 +0000] "GET /api/courses HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:47.133Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:49 +0000] "GET /api/courses HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:49.346Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:07:50 +0000] "GET /api/courses HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:07:50.841Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:21 +0000] "POST /api/past-questions HTTP/1.1" 201 675 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:21.796Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:22 +0000] "POST /api/past-questions HTTP/1.1" 400 50 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:22.012Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:30 +0000] "GET /api/past-questions HTTP/1.1" 200 1296 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:30.612Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:31 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:31.100Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:42 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:42.484Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:42 +0000] "GET /api/past-questions/filters HTTP/1.1" 200 4756 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:42.831Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:43 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:43.067Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:43 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:43.697Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:49 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:49.139Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:49 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:49.315Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:49 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:49.475Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:49 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:49.490Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:49 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:49.663Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:49 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:49.897Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:49 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:49.907Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:50 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:50.248Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:51 +0000] "PUT /api/past-questions/69225e85c86faffccf95eb8d/metadata HTTP/1.1" 200 674 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:51.713Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:52 +0000] "GET /uploads/file-1763860100470-807955731.jpg HTTP/1.1" 200 1009059 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:08:52.117Z'
+}
+{
+  success: false,
+  message: '404 - Route not found Route /favicon.ico not found',
+  path: '/favicon.ico',
+  method: 'GET',
+  timestamp: '2025-11-23T01:08:52.886Z',
   ip: '127.0.0.1',
-  level: 'info',
-  message: 'Detailed health check requested',
-  timestamp: '2025-11-21T16:25:03.290Z'
+  level: 'warn'
 }
 {
-  message: '127.0.0.1 - - [21/Nov/2025:16:25:03 +0000] "GET /api/health HTTP/1.1" 200 271 "-" "curl/8.16.0"',
+  message: '127.0.0.1 - - [23/Nov/2025:01:08:52 +0000] "GET /favicon.ico HTTP/1.1" 404 496 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
   level: 'info',
-  timestamp: '2025-11-21T16:25:03.292Z'
+  timestamp: '2025-11-23T01:08:52.888Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:00 +0000] "PUT /api/past-questions/69225e85c86faffccf95eb8d/metadata HTTP/1.1" 200 674 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:00.649Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:00 +0000] "GET /uploads/file-1763860100470-807955731.jpg HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:00.719Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:05 +0000] "GET /api/past-questions HTTP/1.1" 200 1296 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:05.884Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:05 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:05.896Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:06 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:06.432Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:06 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:06.809Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:08 +0000] "GET /uploads/file-1763860100470-807955731.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:08.960Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:09 +0000] "GET /uploads/file-1763860100470-807955731.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:09.438Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:55 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:55.196Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:55 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:55.341Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:55 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:55.356Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:55 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:55.690Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:55 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:55.693Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:55 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:55.711Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:55 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:55.811Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:56 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:56.187Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:56 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:56.591Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:09:56 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:09:56.715Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:03 +0000] "GET /uploads/file-1763860100470-807955731.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:03.701Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:15 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:15.047Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:15 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:15.226Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:15 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:15.368Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:15 +0000] "GET /api/auth/me HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:15.543Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:15 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:15.625Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:15 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:15.737Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:15 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:15.744Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:16 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:16.166Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:28 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:28.692Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:41 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:41.184Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:44 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:44.059Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:44 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 691 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:44.985Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:50 +0000] "GET /api/past-questions/69225e85c86faffccf95eb8d HTTP/1.1" 200 692 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:50.296Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:54 +0000] "GET /api/past-questions HTTP/1.1" 200 1297 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:54.577Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:54 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:54.934Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:55 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:55.093Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:10:55 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:10:55.836Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:11:08 +0000] "GET /uploads/file-1763742971522-765325404.docx HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:11:08.733Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:11:26 +0000] "GET /uploads/file-1763860100470-807955731.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:11:26.904Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:11:27 +0000] "GET /uploads/file-1763860100470-807955731.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:11:27.477Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:01 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:01.088Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:01 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:01.720Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:08 +0000] "GET /api/courses? HTTP/1.1" 200 5113 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:08.890Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:10 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:10.465Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:11 +0000] "GET /api/courses?sort=questions HTTP/1.1" 200 5113 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:11.265Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:11 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:11.917Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:12 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:12.187Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:12 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:12.387Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:01:12:13 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T01:12:13.122Z'
 }

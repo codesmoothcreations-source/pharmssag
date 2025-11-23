@@ -89,10 +89,10 @@ const Home = () => {
       link: '/videos'
     },
     {
-      icon: <FaGraduationCap className="feature-icon" />,
-      title: 'Course Library',
-      description: 'Browse courses across multiple departments and academic levels.',
-      link: '/courses'
+      icon: <FaSearch className="feature-icon" />,
+      title: 'Smart Search',
+      description: 'Find exactly what you need with our powerful search and filter system.',
+      link: '/search'
     },
     {
       icon: <FaUsers className="feature-icon" />,
@@ -272,13 +272,13 @@ const Home = () => {
               <span className="quick-count">50+ tutorials</span>
             </Link>
 
-            <Link to="/courses" className="quick-card">
+            <Link to="/search" className="quick-card">
               <div className="quick-icon">
-                <FaGraduationCap />
+                <FaSearch />
               </div>
-              <h3>Browse Courses</h3>
-              <p>Explore courses from various departments and levels</p>
-              <span className="quick-count">{stats.courses}+ courses</span>
+              <h3>Smart Search</h3>
+              <p>Find specific topics, courses, and resources instantly</p>
+              <span className="quick-count">AI-powered search</span>
             </Link>
           </div>
         </div>

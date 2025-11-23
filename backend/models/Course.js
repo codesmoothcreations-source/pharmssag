@@ -21,7 +21,7 @@ const courseSchema = new mongoose.Schema({
     level: {
         type: String,
         required: [true, 'Please specify academic level'],
-        enum: ['100', '200', '300', '400']
+        enum: ['100', '200', '300', '400', '500']
     },
     semester: {
         type: String,

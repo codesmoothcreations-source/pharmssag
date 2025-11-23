@@ -241,14 +241,14 @@ const Preview = () => {
                   <FaEye />
                   Preview File
                 </button>
-                <button
+                {/* <button
                   className="btn btn-outline btn-lg"
                   onClick={handleDownload}
                   disabled={downloading || !question.fileUrl}
                 >
                   <FaDownload />
                   {downloading ? 'Downloading...' : 'Download'}
-                </button>
+                </button> */}
               </div>
             </div>
 

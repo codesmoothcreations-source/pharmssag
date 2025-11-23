@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const pinnedVideoSchema = new mongoose.Schema({
     videoId: {
@@ -181,4 +181,4 @@ pinnedVideoSchema.methods.removeFavorite = function() {
     return Promise.resolve(this);
 };
 
-module.exports = mongoose.model('PinnedVideo', pinnedVideoSchema);
+export default mongoose.model('PinnedVideo', pinnedVideoSchema);

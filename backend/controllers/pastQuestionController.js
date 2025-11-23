@@ -1,5 +1,6 @@
-const PastQuestion = require('../models/PastQuestion');
-const Course = require('../models/Course');
+import PastQuestion from '../models/PastQuestion.js';
+import Course from '../models/Course.js';
+import path from 'path';
 
 // Helper function to handle course creation/lookup
 const handleCourseReference = async (courseData) => {
@@ -560,7 +561,7 @@ const downloadPastQuestion = async (req, res) => {
         await pastQuestion.save();
 
         // Serve the file
-        const filePath = require('path').join(__dirname, '..', pastQuestion.fileUrl);
+        const filePath = path.join(__dirname, '..', pastQuestion.fileUrl);
         res.download(filePath, `${pastQuestion.title}.${pastQuestion.fileType === 'pdf' ? 'pdf' : pastQuestion.fileType === 'image' ? 'png' : 'doc'}`);
 
     } catch (error) {
@@ -642,7 +643,7 @@ const getFilterOptions = async (req, res) => {
     }
 };
 
-module.exports = {
+export { 
     getPastQuestions,
     getPastQuestion,
     createPastQuestion,
@@ -652,4 +653,4 @@ module.exports = {
     approvePastQuestion,
     downloadPastQuestion,
     getFilterOptions
-};
+ };

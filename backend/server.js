@@ -1,30 +1,31 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const colors = require('colors');
-const path = require('path');
-const helmet = require('helmet');
-const rateLimit = require('express-rate-limit');
-const mongoSanitize = require('express-mongo-sanitize');
-const xssClean = require('xss-clean');
-const hpp = require('hpp');
-const winston = require('winston');
-const morgan = require('morgan');
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import colors from 'colors';
+import path from 'path';
+import helmet from 'helmet';
+import rateLimit from 'express-rate-limit';
+import mongoSanitize from 'express-mongo-sanitize';
+import xssClean from 'xss-clean';
+import hpp from 'hpp';
+import winston from 'winston';
+import morgan from 'morgan';
+import mongoose from 'mongoose';
 
 // Load environment variables from .env file
 dotenv.config();
 
 // Import database connection utility
-const connectDB = require('./config/db');
+import connectDB from './config/db.js';
 // Import Cloudinary configuration for file uploads
-const { configureCloudinary } = require('./config/cloudinary');
+import { configureCloudinary } from './config/cloudinary.js';
 
 // Import API route handlers
-const authRoutes = require('./routes/auth');
-const pastQuestionRoutes = require('./routes/pastQuestions');
-const videoRoutes = require('./routes/videos');
-const pinnedVideoRoutes = require('./routes/pinnedVideos');
-const courseRoutes = require('./routes/courses');
+import authRoutes from './routes/auth.js';
+import pastQuestionRoutes from './routes/pastQuestions.js';
+import videoRoutes from './routes/videos.js';
+import pinnedVideoRoutes from './routes/pinnedVideos.js';
+import courseRoutes from './routes/courses.js';
 
 // Initialize Express application
 const app = express();
@@ -143,6 +144,9 @@ app.use(express.urlencoded({
 }));
 
 // ==================== STATIC FILE SERVING ====================
+// Define __dirname for ES modules
+const __dirname = path.resolve();
+
 // Serve uploaded files statically
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
@@ -331,38 +335,37 @@ app.use((err, req, res, next) => {
 });
 
 // ==================== SERVER CONFIGURATION ====================
-const PORTS = [5000, 5001];
+const PORT = process.env.PORT || 5000;
 const HOST = process.env.HOST || '0.0.0.0';
-let servers = [];
+let server = null;
 let shuttingDown = false;
 
 // ==================== GRACEFUL SHUTDOWN ====================
 const gracefulShutdown = (signal) => {
     if (shuttingDown) return;
     shuttingDown = true;
-    
+
     logger.info(`Received ${signal}. Starting graceful shutdown...`);
-    console.log(`\n⚠️  Shutting down servers...`.yellow.bold);
-    
-    let shutdownCount = 0;
-    
-    servers.forEach((server, index) => {
-        server.close(() => {
-            shutdownCount++;
-            logger.info(`Server ${index + 1} closed successfully`);
-            console.log(`✅ Server ${index + 1} closed`.green);
-            
-            if (shutdownCount === servers.length) {
-                // Close database connections
-                const mongoose = require('mongoose');
-                mongoose.connection.close();
+    console.log(`\n⚠️  Shutting down server...`.yellow.bold);
+
+    if (server) {
+        server.close((err) => {
+            if (err) {
+                logger.error('Error during server shutdown', { error: err.message });
+                process.exit(1);
+            }
+
+            // Close database connections
+            mongoose.connection.close(() => {
                 logger.info('Database connection closed');
                 console.log(`✅ Database connection closed`.green);
                 process.exit(0);
-            }
+            });
         });
-    });
-    
+    } else {
+        process.exit(0);
+    }
+
     // Force shutdown after timeout
     setTimeout(() => {
         logger.error('Forced shutdown after timeout');
@@ -371,40 +374,27 @@ const gracefulShutdown = (signal) => {
     }, 10000);
 };
 
-// Start HTTP servers on multiple ports
-PORTS.forEach((PORT, index) => {
-    try {
-        const server = app.listen(PORT, HOST, () => {
-            logger.info(`Server ${index + 1} initialization completed`, {
-                port: PORT,
-                host: HOST,
-                environment: process.env.NODE_ENV,
-                version: '1.0.0',
-                timestamp: new Date().toISOString()
-            });
-
-            console.log(`\n🎓 University Past Questions Server ${index + 1} running in ${process.env.NODE_ENV} mode`.yellow.bold);
-            console.log(`📍 Server ${index + 1} started on port ${PORT}`.cyan.bold);
-            console.log(`🔗 API URL ${index + 1}: http://localhost:${PORT}/api`.green.underline);
-            console.log(`🏠 Home URL ${index + 1}: http://localhost:${PORT}/`.green.underline);
-            console.log(`📊 Health Check ${index + 1}: http://localhost:${PORT}/api/health`.blue.underline);
-            console.log(`📁 File Uploads ${index + 1}: http://localhost:${PORT}/uploads`.blue.underline);
+// Start HTTP server on a single port
+try {
+    server = app.listen(PORT, HOST, () => {
+        logger.info(`Server initialization completed`, {
+            port: PORT,
+            host: HOST,
+            environment: process.env.NODE_ENV,
+            version: '1.0.0',
+            timestamp: new Date().toISOString()
         });
-        
-        servers.push(server);
-    } catch (error) {
-        logger.error(`Failed to start server ${index + 1} on port ${PORT}`, { error: error.message });
-        console.error(`❌ Failed to start server ${index + 1} on port ${PORT}: ${error.message}`.red.bold);
-    }
-});
 
-// Log server startup summary
-if (servers.length > 0) {
-    console.log(`\n🚀 All servers started successfully`.green.bold);
-    console.log(`📊 Backend available on ports: ${PORTS.join(', ')}`.cyan.bold);
-    console.log(`🔗 Frontend should connect to: http://localhost:5000/api and http://localhost:5001/api`.yellow.bold);
-} else {
-    console.error(`❌ Failed to start any servers`.red.bold);
+        console.log(`\n🎓 University Past Questions Server running in ${process.env.NODE_ENV} mode`.yellow.bold);
+        console.log(`📍 Server started on port ${PORT}`.cyan.bold);
+        console.log(`🔗 API URL: http://localhost:${PORT}/api`.green.underline);
+        console.log(`🏠 Home URL: http://localhost:${PORT}/`.green.underline);
+        console.log(`📊 Health Check: http://localhost:${PORT}/api/health`.blue.underline);
+        console.log(`📁 File Uploads: http://localhost:${PORT}/uploads`.blue.underline);
+    });
+} catch (error) {
+    logger.error(`Failed to start server on port ${PORT}`, { error: error.message });
+    console.error(`❌ Failed to start server on port ${PORT}: ${error.message}`.red.bold);
     process.exit(1);
 }
 
@@ -450,4 +440,4 @@ app.use((req, res, next) => {
 });
 
 // Export app for testing purposes
-module.exports = app;
+export default app;

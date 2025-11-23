@@ -1,5 +1,5 @@
-const Course = require('../models/Course');
-const PastQuestion = require('../models/PastQuestion');
+import Course from '../models/Course.js';
+import PastQuestion from '../models/PastQuestion.js';
 
 /**
  * @desc    Get all courses with question counts
@@ -243,10 +243,10 @@ const deleteCourse = async (req, res) => {
     }
 };
 
-module.exports = {
+export { 
     getAllCourses,
     getSingleCourse,
     createCourse,
     updateCourse,
     deleteCourse
-};
+ };

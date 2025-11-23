@@ -18165,3 +18165,278 @@
   level: 'info',
   timestamp: '2025-11-23T01:12:13.122Z'
 }
+{
+  port: 5000,
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T02:45:20.793Z',
+  level: 'info',
+  message: 'Server 1 initialization completed'
+}
+{
+  port: 5001,
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T02:45:20.813Z',
+  level: 'info',
+  message: 'Server 2 initialization completed'
+}
+{
+  port: 5000,
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T02:45:39.420Z',
+  level: 'info',
+  message: 'Server 1 initialization completed'
+}
+{
+  port: 5001,
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T02:45:39.429Z',
+  level: 'info',
+  message: 'Server 2 initialization completed'
+}
+{
+  port: 5000,
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T02:47:10.713Z',
+  level: 'info',
+  message: 'Server 1 initialization completed'
+}
+{
+  port: 5001,
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T02:47:10.731Z',
+  level: 'info',
+  message: 'Server 2 initialization completed'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:17 +0000] "GET /api/past-questions HTTP/1.1" 200 1297 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:17.510Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:17 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:17.557Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:18 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:18.699Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:18 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:18.714Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:19 +0000] "GET /api/courses? HTTP/1.1" 200 5113 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:19.295Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:21 +0000] "GET /api/courses? HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:21.888Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:24 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:24.141Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:24 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:24.467Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:24 +0000] "GET /api/past-questions/filters HTTP/1.1" 200 4756 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:24.558Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:24 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:24.791Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:24 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:24.871Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:24 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:24.911Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:25 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:25.095Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:25 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:25.582Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:25 +0000] "GET /api/past-questions/filters HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:25.725Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:26 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:26.316Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:28 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:28.040Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:28 +0000] "GET /api/videos/search?query=pharmacy+education&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:28.082Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:28 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:28.507Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:28 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:28.530Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:29 +0000] "GET /api/past-questions HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:29.277Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:29 +0000] "GET /api/videos/search HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:29.297Z'
+}
+{
+  message: '127.0.0.1 - - [23/Nov/2025:02:47:29 +0000] "GET /api/videos/search?query=nursing&maxResults=12 HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"',
+  level: 'info',
+  timestamp: '2025-11-23T02:47:29.839Z'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T02:56:40.002Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:14:09.111Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:14:55.806Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:15:52.527Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:16:23.654Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:17:00.164Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:20:08.756Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:21:12.820Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:22:04.714Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  port: '5001',
+  host: '0.0.0.0',
+  environment: 'development',
+  version: '1.0.0',
+  timestamp: '2025-11-23T03:40:55.779Z',
+  level: 'info',
+  message: 'Server initialization completed'
+}
+{
+  error: 'listen EADDRINUSE: address already in use 0.0.0.0:5001',
+  stack: 'Error: listen EADDRINUSE: address already in use 0.0.0.0:5001\n' +
+    '    at Server.setupListenHandle [as _listen2] (node:net:1940:16)\n' +
+    '    at listenInCluster (node:net:1997:12)\n' +
+    '    at node:net:2206:7\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)',
+  level: 'error',
+  message: 'Uncaught Exception',
+  timestamp: '2025-11-23T03:40:56.400Z'
+}
+{
+  message: 'Received SIGINT. Starting graceful shutdown...',
+  level: 'info',
+  timestamp: '2025-11-23T03:41:03.120Z'
+}

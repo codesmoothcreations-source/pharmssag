@@ -1,6 +1,6 @@
-const express = require('express');
-const rateLimit = require('express-rate-limit');
-const {
+import express from 'express';
+import rateLimit from 'express-rate-limit';
+import {
     searchVideosEnhanced,
     pinVideo,
     getPinnedVideos,
@@ -10,8 +10,8 @@ const {
     getVideoPreferences,
     updateVideoPreferences,
     bulkPinVideos
-} = require('../controllers/pinnedVideoController');
-const { protect, authorize } = require('../middleware/auth');
+} from '../controllers/pinnedVideoController.js';
+import { protect, authorize } from '../middleware/auth.js';
 
 // Rate limiting middleware
 const createRateLimit = (windowMs, max, message) => {
@@ -78,4 +78,4 @@ router.get('/health', (req, res) => {
     });
 });
 
-module.exports = router;
+export default router;

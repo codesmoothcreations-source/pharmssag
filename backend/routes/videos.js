@@ -1,7 +1,7 @@
-const express = require('express');
-const { searchVideos, addVideoToPastQuestion } = require('../controllers/videoController');
-const { searchVideosEnhanced } = require('../controllers/pinnedVideoController');
-const { protect, authorize } = require('../middleware/auth');
+import express from 'express';
+import { searchVideos, addVideoToPastQuestion } from '../controllers/videoController.js';
+import { searchVideosEnhanced } from '../controllers/pinnedVideoController.js';
+import { protect, authorize } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -54,4 +54,4 @@ router.get('/pinned', protect, async (req, res) => {
  */
 router.post('/past-question/:id', protect, authorize('admin'), addVideoToPastQuestion);
 
-module.exports = router;
+export default router;

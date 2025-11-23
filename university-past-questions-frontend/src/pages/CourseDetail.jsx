@@ -241,7 +241,7 @@ const CourseDetail = () => {
   const handleDownload = (question) => {
     if (question.fileUrl) {
       const link = document.createElement('a')
-      const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'
+      const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5001'
       const cleanFileUrl = question.fileUrl.replace(/^\/*/, '').replace(/\\/g, '/')
       link.href = `${baseUrl}/${cleanFileUrl}`
       link.download = `${question.title || 'past_question'}.pdf`

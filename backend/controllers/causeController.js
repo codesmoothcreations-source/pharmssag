@@ -1,4 +1,4 @@
-const Cause = require('../models/Cause');
+import Cause from '../models/Cause.js';
 
 /**
  * @desc    Get all causes
@@ -250,7 +250,7 @@ const getCauseCategories = async (req, res) => {
     }
 };
 
-module.exports = {
+export { 
     getAllCauses,
     getCausesByCategory,
     getSingleCause,
@@ -258,4 +258,4 @@ module.exports = {
     updateCause,
     deleteCause,
     getCauseCategories
-};
+ };

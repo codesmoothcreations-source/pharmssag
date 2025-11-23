@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 /**
  * Causes Schema for categorizing question causes/topics
@@ -65,4 +65,4 @@ causeSchema.statics.getByCategory = function(category) {
         .sort({ name: 1 });
 };
 
-module.exports = mongoose.model('Cause', causeSchema);
+export default mongoose.model('Cause', causeSchema);

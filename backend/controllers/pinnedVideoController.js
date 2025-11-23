@@ -1,4 +1,4 @@
-const { getMockVideos } = require('../utils/mockVideoService');
+import { getMockVideos } from '../utils/mockVideoService.js';
 
 /**
  * Enhanced video search with comprehensive filtering
@@ -147,7 +147,7 @@ const bulkPinVideos = async (req, res) => {
   }
 };
 
-module.exports = {
+export { 
   searchVideosEnhanced,
   pinVideo,
   getPinnedVideos,
@@ -157,4 +157,4 @@ module.exports = {
   getVideoPreferences,
   updateVideoPreferences,
   bulkPinVideos
-};
+ };

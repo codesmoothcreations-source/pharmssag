@@ -326,7 +326,7 @@ const sanitizeVideoData = (videoData) => {
     };
 };
 
-module.exports = {
+export { 
     validateVideoURL,
     parseYouTubeURL,
     generateYouTubeURLs,
@@ -341,4 +341,4 @@ module.exports = {
     generateShareInfo,
     rateLimits,
     sanitizeVideoData
-};
+ };

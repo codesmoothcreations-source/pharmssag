@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 /**
  * Past Question Schema for storing exam papers and related data
@@ -134,4 +134,4 @@ pastQuestionSchema.pre('save', function(next) {
     next();
 });
 
-module.exports = mongoose.model('PastQuestion', pastQuestionSchema);
+export default mongoose.model('PastQuestion', pastQuestionSchema);

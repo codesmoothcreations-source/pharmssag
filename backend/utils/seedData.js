@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const Course = require('../models/Course');
-const User = require('../models/User');
-const dotenv = require('dotenv');
+import mongoose from 'mongoose';
+import Course from '../models/Course.js';
+import User from '../models/User.js';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -108,4 +108,4 @@ if (require.main === module) {
     seedCourses();
 }
 
-module.exports = seedCourses;
+export default seedCourses;

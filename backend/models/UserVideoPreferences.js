@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const userVideoPreferencesSchema = new mongoose.Schema({
     user: {
@@ -234,4 +234,4 @@ userVideoPreferencesSchema.statics.createDefaultPreferences = function(userId) {
     });
 };
 
-module.exports = mongoose.model('UserVideoPreferences', userVideoPreferencesSchema);
+export default mongoose.model('UserVideoPreferences', userVideoPreferencesSchema);

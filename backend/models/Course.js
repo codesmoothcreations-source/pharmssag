@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 /**
  * Course Schema to organize past questions by course
@@ -47,4 +47,4 @@ const courseSchema = new mongoose.Schema({
 // Compound index for efficient queries by level and semester
 courseSchema.index({ level: 1, semester: 1 });
 
-module.exports = mongoose.model('Course', courseSchema);
+export default mongoose.model('Course', courseSchema);

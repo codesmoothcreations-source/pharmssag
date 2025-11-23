@@ -224,7 +224,7 @@ const PastQuestions = () => {
   const handleDownload = async (question) => {
     try {
       // Use primary API URL as base
-      const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000'
+      const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5001'
       
       // Clean the file URL properly
       let cleanFileUrl = question.fileUrl.replace(/^\/*/, '').replace(/\\/g, '/')

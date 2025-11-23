@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 /**
  * Enhanced YouTube API search with comprehensive options
@@ -274,11 +274,11 @@ const youtubeApiHealthCheck = async () => {
     }
 };
 
-module.exports = {
+export { 
     searchYouTubeAPI,
     getVideoDetails,
     getRelatedVideos,
     validateApiKey,
     extractVideoMetadata,
     youtubeApiHealthCheck
-};
+ };

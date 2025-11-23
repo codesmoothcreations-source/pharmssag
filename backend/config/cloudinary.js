@@ -1,4 +1,4 @@
-const cloudinary = require('cloudinary').v2;
+import { v2 as cloudinary } from 'cloudinary';
 
 /**
  * Configure Cloudinary for file uploads
@@ -13,4 +13,4 @@ const configureCloudinary = () => {
     console.log('✅ Cloudinary configured successfully'.cyan.underline);
 };
 
-module.exports = { configureCloudinary, cloudinary };
+export { configureCloudinary, cloudinary };

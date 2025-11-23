@@ -1,5 +1,5 @@
-const express = require('express');
-const {
+import express from 'express';
+import {
     getPastQuestions,
     getPastQuestion,
     createPastQuestion,
@@ -9,9 +9,9 @@ const {
     downloadPastQuestion,
     getFilterOptions,
     updateQuestionMetadata
-} = require('../controllers/pastQuestionController');
-const { protect, authorize } = require('../middleware/auth');
-const upload = require('../middleware/upload');
+} from '../controllers/pastQuestionController.js';
+import { protect, authorize } from '../middleware/auth.js';
+import upload from '../middleware/upload.js';
 
 const router = express.Router();
 
@@ -51,4 +51,4 @@ router.route('/:id')
 router.route('/:id/approve')
     .put(authorize('admin'), approvePastQuestion);
 
-module.exports = router;
+export default router;

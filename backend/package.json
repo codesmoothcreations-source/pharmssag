@@ -2,6 +2,7 @@
   "name": "pharmssag-backend",
   "version": "1.0.0",
   "description": "Backend for Pharmssag Pharmacy Education Platform",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -1,5 +1,5 @@
-const express = require('express');
-const {
+import express from 'express';
+import {
     getAllCauses,
     getCausesByCategory,
     getSingleCause,
@@ -7,8 +7,8 @@ const {
     updateCause,
     deleteCause,
     getCauseCategories
-} = require('../controllers/causeController');
-const { protect, authorize } = require('../middleware/auth');
+} from '../controllers/causeController.js';
+import { protect, authorize } from '../middleware/auth.js';
 
 const router = express.Router();
 
@@ -36,4 +36,4 @@ router.route('/:id')
     .put(updateCause)
     .delete(deleteCause);
 
-module.exports = router;
+export default router;

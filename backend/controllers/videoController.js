@@ -1,6 +1,6 @@
-const axios = require('axios');
-const PastQuestion = require('../models/PastQuestion');
-const { getMockVideos } = require('../utils/mockVideoService');
+import axios from 'axios';
+import PastQuestion from '../models/PastQuestion.js';
+import { getMockVideos } from '../utils/mockVideoService.js';
 
 /**
  * @desc    Search videos related to course
@@ -89,7 +89,7 @@ const addVideoToPastQuestion = async (req, res) => {
     }
 };
 
-module.exports = {
+export { 
     searchVideos,
     addVideoToPastQuestion
-};
+ };

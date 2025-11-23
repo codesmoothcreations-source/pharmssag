@@ -1,7 +1,7 @@
-const express = require('express');
-const { EventEmitter } = require('events');
-const fs = require('fs').promises;
-const path = require('path');
+import express from 'express';
+import { EventEmitter } from 'events';
+import fs from 'fs';.promises;
+import path from 'path';
 
 /**
  * Performance Analytics and Alerting System
@@ -1424,4 +1424,4 @@ class PerformanceAnalytics extends EventEmitter {
     }
 }
 
-module.exports = PerformanceAnalytics;
+export default PerformanceAnalytics;

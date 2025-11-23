@@ -444,6 +444,6 @@ const getMockVideos = (query, category = 'all', difficulty = 'all', maxResults =
   };
 };
 
-module.exports = {
+export { 
   getMockVideos
-};
+ };
